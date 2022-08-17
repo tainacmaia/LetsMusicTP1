@@ -1,3 +1,5 @@
+using LetsMusicTP1.Presentation;
+
 namespace LetsMusicTP1
 {
     public partial class frmMenuLetsMusic : Form
@@ -48,6 +50,18 @@ namespace LetsMusicTP1
         private void alunoToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             var form = new FrmPesquisaAluno();
+            form.ShowDialog();
+        }
+
+        private void cursoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var form = new FrmPesquisaCurso();
+            form.ShowDialog();
+        }
+
+        private void turmaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var form = new FrmPesquisaTurma();
             form.ShowDialog();
         }
     }

@@ -38,12 +38,6 @@
             this.alunoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.cursoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.turmaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.atualizarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.alunoToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.cursoToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.removerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.alunoToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.cursoToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblBemVindo = new System.Windows.Forms.Label();
@@ -58,7 +52,7 @@
             this.sairToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(373, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(442, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -66,9 +60,7 @@
             // 
             this.tsmOpcoes.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cadastroToolStripMenuItem,
-            this.pesquisarToolStripMenuItem,
-            this.atualizarToolStripMenuItem,
-            this.removerToolStripMenuItem});
+            this.pesquisarToolStripMenuItem});
             this.tsmOpcoes.Name = "tsmOpcoes";
             this.tsmOpcoes.Size = new System.Drawing.Size(59, 20);
             this.tsmOpcoes.Text = "Opções";
@@ -113,7 +105,7 @@
             this.turmaToolStripMenuItem1});
             this.pesquisarToolStripMenuItem.Name = "pesquisarToolStripMenuItem";
             this.pesquisarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.pesquisarToolStripMenuItem.Text = "Pesquisar";
+            this.pesquisarToolStripMenuItem.Text = "Pesquisar/Alterar";
             // 
             // alunoToolStripMenuItem1
             // 
@@ -127,54 +119,14 @@
             this.cursoToolStripMenuItem1.Name = "cursoToolStripMenuItem1";
             this.cursoToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.cursoToolStripMenuItem1.Text = "Curso";
+            this.cursoToolStripMenuItem1.Click += new System.EventHandler(this.cursoToolStripMenuItem1_Click);
             // 
             // turmaToolStripMenuItem1
             // 
             this.turmaToolStripMenuItem1.Name = "turmaToolStripMenuItem1";
             this.turmaToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.turmaToolStripMenuItem1.Text = "Turma";
-            // 
-            // atualizarToolStripMenuItem
-            // 
-            this.atualizarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.alunoToolStripMenuItem2,
-            this.cursoToolStripMenuItem2});
-            this.atualizarToolStripMenuItem.Name = "atualizarToolStripMenuItem";
-            this.atualizarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.atualizarToolStripMenuItem.Text = "Atualizar dados";
-            // 
-            // alunoToolStripMenuItem2
-            // 
-            this.alunoToolStripMenuItem2.Name = "alunoToolStripMenuItem2";
-            this.alunoToolStripMenuItem2.Size = new System.Drawing.Size(106, 22);
-            this.alunoToolStripMenuItem2.Text = "Aluno";
-            // 
-            // cursoToolStripMenuItem2
-            // 
-            this.cursoToolStripMenuItem2.Name = "cursoToolStripMenuItem2";
-            this.cursoToolStripMenuItem2.Size = new System.Drawing.Size(106, 22);
-            this.cursoToolStripMenuItem2.Text = "Curso";
-            // 
-            // removerToolStripMenuItem
-            // 
-            this.removerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.alunoToolStripMenuItem3,
-            this.cursoToolStripMenuItem3});
-            this.removerToolStripMenuItem.Name = "removerToolStripMenuItem";
-            this.removerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.removerToolStripMenuItem.Text = "Remover";
-            // 
-            // alunoToolStripMenuItem3
-            // 
-            this.alunoToolStripMenuItem3.Name = "alunoToolStripMenuItem3";
-            this.alunoToolStripMenuItem3.Size = new System.Drawing.Size(106, 22);
-            this.alunoToolStripMenuItem3.Text = "Aluno";
-            // 
-            // cursoToolStripMenuItem3
-            // 
-            this.cursoToolStripMenuItem3.Name = "cursoToolStripMenuItem3";
-            this.cursoToolStripMenuItem3.Size = new System.Drawing.Size(106, 22);
-            this.cursoToolStripMenuItem3.Text = "Curso";
+            this.turmaToolStripMenuItem1.Click += new System.EventHandler(this.turmaToolStripMenuItem1_Click);
             // 
             // sobreToolStripMenuItem
             // 
@@ -193,9 +145,11 @@
             // lblBemVindo
             // 
             this.lblBemVindo.AutoSize = true;
-            this.lblBemVindo.Location = new System.Drawing.Point(117, 63);
+            this.lblBemVindo.BackColor = System.Drawing.Color.Transparent;
+            this.lblBemVindo.Font = new System.Drawing.Font("Segoe UI", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.lblBemVindo.Location = new System.Drawing.Point(106, 73);
             this.lblBemVindo.Name = "lblBemVindo";
-            this.lblBemVindo.Size = new System.Drawing.Size(140, 15);
+            this.lblBemVindo.Size = new System.Drawing.Size(233, 25);
             this.lblBemVindo.TabIndex = 1;
             this.lblBemVindo.Text = "Bem-vindo à Let\'s Music!";
             // 
@@ -204,7 +158,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(373, 374);
+            this.BackgroundImage = global::LetsMusicTP1.Presentation.Properties.Resources.fundo;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(442, 401);
             this.ControlBox = false;
             this.Controls.Add(this.lblBemVindo);
             this.Controls.Add(this.menuStrip1);
@@ -229,12 +185,6 @@
         private ToolStripMenuItem cursoToolStripMenuItem;
         private ToolStripMenuItem alunoToolStripMenuItem1;
         private ToolStripMenuItem cursoToolStripMenuItem1;
-        private ToolStripMenuItem atualizarToolStripMenuItem;
-        private ToolStripMenuItem alunoToolStripMenuItem2;
-        private ToolStripMenuItem cursoToolStripMenuItem2;
-        private ToolStripMenuItem removerToolStripMenuItem;
-        private ToolStripMenuItem alunoToolStripMenuItem3;
-        private ToolStripMenuItem cursoToolStripMenuItem3;
         private ToolStripMenuItem sobreToolStripMenuItem;
         private ToolStripMenuItem sairToolStripMenuItem;
         private Label lblBemVindo;

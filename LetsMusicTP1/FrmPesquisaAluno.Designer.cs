@@ -38,6 +38,8 @@
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnRemoverAluno = new System.Windows.Forms.Button();
+            this.btnAlterarAluno = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -126,17 +128,40 @@
             this.CPF.Name = "CPF";
             this.CPF.Width = 150;
             // 
+            // btnRemoverAluno
+            // 
+            this.btnRemoverAluno.Location = new System.Drawing.Point(511, 358);
+            this.btnRemoverAluno.Name = "btnRemoverAluno";
+            this.btnRemoverAluno.Size = new System.Drawing.Size(75, 23);
+            this.btnRemoverAluno.TabIndex = 17;
+            this.btnRemoverAluno.Text = "Remover";
+            this.btnRemoverAluno.UseVisualStyleBackColor = true;
+            // 
+            // btnAlterarAluno
+            // 
+            this.btnAlterarAluno.Location = new System.Drawing.Point(354, 358);
+            this.btnAlterarAluno.Name = "btnAlterarAluno";
+            this.btnAlterarAluno.Size = new System.Drawing.Size(75, 23);
+            this.btnAlterarAluno.TabIndex = 16;
+            this.btnAlterarAluno.Text = "Alterar";
+            this.btnAlterarAluno.UseVisualStyleBackColor = true;
+            // 
             // FrmPesquisaAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(941, 361);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(941, 434);
+            this.Controls.Add(this.btnRemoverAluno);
+            this.Controls.Add(this.btnAlterarAluno);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblPesquisa);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmPesquisaAluno";
             this.Text = "PesquisaAluno";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -157,5 +182,7 @@
         private DataGridViewTextBoxColumn Email;
         private DataGridViewTextBoxColumn Telefone;
         private DataGridViewTextBoxColumn CPF;
+        private Button btnRemoverAluno;
+        private Button btnAlterarAluno;
     }
 }

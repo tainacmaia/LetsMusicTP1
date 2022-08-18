@@ -115,18 +115,21 @@
             // mskTelefone
             // 
             this.mskTelefone.Location = new System.Drawing.Point(142, 185);
-            this.mskTelefone.Mask = "(00) 00000-0000";
+            this.mskTelefone.Mask = "(00)00000-0000";
             this.mskTelefone.Name = "mskTelefone";
             this.mskTelefone.Size = new System.Drawing.Size(129, 23);
             this.mskTelefone.TabIndex = 8;
+            this.mskTelefone.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePromptAndLiterals;
             // 
             // mskCpf
             // 
+            this.mskCpf.Culture = new System.Globalization.CultureInfo("");
             this.mskCpf.Location = new System.Drawing.Point(142, 228);
             this.mskCpf.Mask = "000.000.000-00";
             this.mskCpf.Name = "mskCpf";
             this.mskCpf.Size = new System.Drawing.Size(129, 23);
             this.mskCpf.TabIndex = 9;
+            this.mskCpf.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePromptAndLiterals;
             // 
             // lblTituloCadAluno
             // 

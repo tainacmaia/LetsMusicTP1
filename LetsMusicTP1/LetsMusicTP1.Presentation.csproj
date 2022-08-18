@@ -9,6 +9,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\LetsMusicTP1.Domain\LetsMusicTP1.Domain.csproj" />
+    <ProjectReference Include="..\LetsMusicTP1.Repositories\LetsMusicTP1.Repositories.csproj" />
+    <ProjectReference Include="..\LetsMusicTP1.Services\LetsMusicTP1.Services.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>

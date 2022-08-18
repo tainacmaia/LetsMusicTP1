@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\LetsMusicTP1.Domain\LetsMusicTP1.Domain.csproj" />
+    <ProjectReference Include="..\LetsMusicTP1.Repositories\LetsMusicTP1.Repositories.csproj" />
+  </ItemGroup>
+
 </Project>

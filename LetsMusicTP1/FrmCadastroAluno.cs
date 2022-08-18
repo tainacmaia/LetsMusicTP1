@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using LetsMusicTP1.Services;
 
 namespace LetsMusicTP1
 {
@@ -24,7 +16,16 @@ namespace LetsMusicTP1
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Cadastrado com sucesso!");
+            List<string> dadosAluno = new() { txbEmail.Text, txbNome.Text, mskTelefone.Text, mskCpf.Text };
+            if (dadosAluno.Any(x => x == string.Empty) || mskCpf.Text.Contains('_') || mskTelefone.Text.Contains('_'))
+            {
+                MessageBox.Show("Preencha todos os campos obrigatórios!");
+            }
+            else
+            {
+                string msg = ServicesAluno.CadastrarAluno(dadosAluno);
+                MessageBox.Show(msg);
+            }
         }
     }
 }

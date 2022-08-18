@@ -31,9 +31,9 @@
             this.lblNome = new System.Windows.Forms.Label();
             this.lblCargaHoraria = new System.Windows.Forms.Label();
             this.lblVagas = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.mskCarga = new System.Windows.Forms.MaskedTextBox();
+            this.mskVagas = new System.Windows.Forms.MaskedTextBox();
+            this.txtNomeCurso = new System.Windows.Forms.TextBox();
             this.lblCampoObrig1 = new System.Windows.Forms.Label();
             this.lblTituloCadCurso = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -68,30 +68,32 @@
             this.lblVagas.TabIndex = 2;
             this.lblVagas.Text = "Vagas";
             // 
-            // maskedTextBox1
+            // mskCarga
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(190, 138);
-            this.maskedTextBox1.Mask = "00000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(86, 23);
-            this.maskedTextBox1.TabIndex = 3;
-            this.maskedTextBox1.ValidatingType = typeof(int);
+            this.mskCarga.Location = new System.Drawing.Point(190, 138);
+            this.mskCarga.Mask = "00000";
+            this.mskCarga.Name = "mskCarga";
+            this.mskCarga.Size = new System.Drawing.Size(86, 23);
+            this.mskCarga.TabIndex = 3;
+            this.mskCarga.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.mskCarga.ValidatingType = typeof(int);
             // 
-            // maskedTextBox2
+            // mskVagas
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(164, 176);
-            this.maskedTextBox2.Mask = "00000";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(112, 23);
-            this.maskedTextBox2.TabIndex = 4;
-            this.maskedTextBox2.ValidatingType = typeof(int);
+            this.mskVagas.Location = new System.Drawing.Point(164, 176);
+            this.mskVagas.Mask = "00000";
+            this.mskVagas.Name = "mskVagas";
+            this.mskVagas.Size = new System.Drawing.Size(112, 23);
+            this.mskVagas.TabIndex = 4;
+            this.mskVagas.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.mskVagas.ValidatingType = typeof(int);
             // 
-            // textBox1
+            // txtNomeCurso
             // 
-            this.textBox1.Location = new System.Drawing.Point(139, 95);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(137, 23);
-            this.textBox1.TabIndex = 5;
+            this.txtNomeCurso.Location = new System.Drawing.Point(139, 95);
+            this.txtNomeCurso.Name = "txtNomeCurso";
+            this.txtNomeCurso.Size = new System.Drawing.Size(137, 23);
+            this.txtNomeCurso.TabIndex = 5;
             // 
             // lblCampoObrig1
             // 
@@ -139,6 +141,7 @@
             this.btnCadastrarCurso.TabIndex = 15;
             this.btnCadastrarCurso.Text = "Cadastrar";
             this.btnCadastrarCurso.UseVisualStyleBackColor = true;
+            this.btnCadastrarCurso.Click += new System.EventHandler(this.btnCadastrarCurso_Click);
             // 
             // FrmCadastroCurso
             // 
@@ -150,9 +153,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblCampoObrig1);
             this.Controls.Add(this.lblTituloCadCurso);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.maskedTextBox2);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.txtNomeCurso);
+            this.Controls.Add(this.mskVagas);
+            this.Controls.Add(this.mskCarga);
             this.Controls.Add(this.lblVagas);
             this.Controls.Add(this.lblCargaHoraria);
             this.Controls.Add(this.lblNome);
@@ -168,9 +171,9 @@
         private Label lblNome;
         private Label lblCargaHoraria;
         private Label lblVagas;
-        private MaskedTextBox maskedTextBox1;
-        private MaskedTextBox maskedTextBox2;
-        private TextBox textBox1;
+        private MaskedTextBox mskCarga;
+        private MaskedTextBox mskVagas;
+        private TextBox txtNomeCurso;
         private Label lblCampoObrig1;
         private Label lblTituloCadCurso;
         private Label label1;

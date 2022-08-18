@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using LetsMusicTP1.Services;
 
 namespace LetsMusicTP1
 {
@@ -17,5 +9,18 @@ namespace LetsMusicTP1
             InitializeComponent();
         }
 
+        private void btnCadastrarCurso_Click(object sender, EventArgs e)
+        {
+            List<string> dadosCurso = new() { txtNomeCurso.Text, mskCarga.Text, mskVagas.Text };
+            if (txtNomeCurso.Text == string.Empty)
+            {
+                MessageBox.Show("Preencha todos os campos obrigatórios!");
+            }
+            else
+            {
+                string msg = ServicesCurso.CadastrarCurso(dadosCurso);
+                MessageBox.Show(msg);
+            }
+        }
     }
 }

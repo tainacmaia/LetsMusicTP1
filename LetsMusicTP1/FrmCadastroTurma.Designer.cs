@@ -115,6 +115,7 @@
             this.Name = "FrmCadastroTurma";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmCadastroTurma";
+            this.Load += new System.EventHandler(this.FrmCadastroTurma_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

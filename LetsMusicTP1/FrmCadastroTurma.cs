@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using LetsMusicTP1.Repositories;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace LetsMusicTP1
 {
@@ -15,6 +8,15 @@ namespace LetsMusicTP1
         public FrmCadastroTurma()
         {
             InitializeComponent();
+        }
+
+        private void FrmCadastroTurma_Load(object sender, EventArgs e)
+        {
+            List<string> cursos = RepositorioCurso.listaCurso.Select(x => x.Nome).ToList();
+            foreach (var curso in cursos)
+            {
+                cbbCurso.Items.Add(curso);
+            }
         }
     }
 }

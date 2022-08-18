@@ -29,15 +29,17 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Identificação = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CargaHoraria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Vagas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblPesquisa = new System.Windows.Forms.Label();
-            this.Identificação = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CargaHoraria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Vagas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnRemoverCurso = new System.Windows.Forms.Button();
+            this.btnAlterarCurso = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,57 +52,12 @@
             this.Nome,
             this.CargaHoraria,
             this.Vagas});
-            this.dataGridView1.Location = new System.Drawing.Point(97, 161);
+            this.dataGridView1.Location = new System.Drawing.Point(37, 146);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridView1.Size = new System.Drawing.Size(456, 105);
             this.dataGridView1.TabIndex = 13;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Nome",
-            "Identificação"});
-            this.comboBox1.Location = new System.Drawing.Point(316, 37);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 23);
-            this.comboBox1.TabIndex = 12;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(217, 40);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 15);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Pesquisar por:";
-            // 
-            // btnPesquisar
-            // 
-            this.btnPesquisar.Location = new System.Drawing.Point(300, 108);
-            this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(75, 23);
-            this.btnPesquisar.TabIndex = 10;
-            this.btnPesquisar.Text = "Pesquisar";
-            this.btnPesquisar.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(262, 66);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(175, 23);
-            this.textBox1.TabIndex = 9;
-            // 
-            // lblPesquisa
-            // 
-            this.lblPesquisa.AutoSize = true;
-            this.lblPesquisa.Location = new System.Drawing.Point(206, 69);
-            this.lblPesquisa.Name = "lblPesquisa";
-            this.lblPesquisa.Size = new System.Drawing.Size(40, 15);
-            this.lblPesquisa.TabIndex = 8;
-            this.lblPesquisa.Text = "Nome";
             // 
             // Identificação
             // 
@@ -126,11 +83,76 @@
             this.Vagas.Name = "Vagas";
             this.Vagas.Width = 80;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Nome",
+            "Identificação"});
+            this.comboBox1.Location = new System.Drawing.Point(256, 22);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 23);
+            this.comboBox1.TabIndex = 12;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(157, 25);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(81, 15);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Pesquisar por:";
+            // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.Location = new System.Drawing.Point(240, 93);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(75, 23);
+            this.btnPesquisar.TabIndex = 10;
+            this.btnPesquisar.Text = "Pesquisar";
+            this.btnPesquisar.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(202, 51);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(175, 23);
+            this.textBox1.TabIndex = 9;
+            // 
+            // lblPesquisa
+            // 
+            this.lblPesquisa.AutoSize = true;
+            this.lblPesquisa.Location = new System.Drawing.Point(146, 54);
+            this.lblPesquisa.Name = "lblPesquisa";
+            this.lblPesquisa.Size = new System.Drawing.Size(40, 15);
+            this.lblPesquisa.TabIndex = 8;
+            this.lblPesquisa.Text = "Nome";
+            // 
+            // btnRemoverCurso
+            // 
+            this.btnRemoverCurso.Location = new System.Drawing.Point(316, 286);
+            this.btnRemoverCurso.Name = "btnRemoverCurso";
+            this.btnRemoverCurso.Size = new System.Drawing.Size(75, 23);
+            this.btnRemoverCurso.TabIndex = 19;
+            this.btnRemoverCurso.Text = "Remover";
+            this.btnRemoverCurso.UseVisualStyleBackColor = true;
+            // 
+            // btnAlterarCurso
+            // 
+            this.btnAlterarCurso.Location = new System.Drawing.Point(159, 286);
+            this.btnAlterarCurso.Name = "btnAlterarCurso";
+            this.btnAlterarCurso.Size = new System.Drawing.Size(75, 23);
+            this.btnAlterarCurso.TabIndex = 18;
+            this.btnAlterarCurso.Text = "Alterar";
+            this.btnAlterarCurso.UseVisualStyleBackColor = true;
+            // 
             // FrmPesquisaCurso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(622, 357);
+            this.ClientSize = new System.Drawing.Size(534, 361);
+            this.Controls.Add(this.btnRemoverCurso);
+            this.Controls.Add(this.btnAlterarCurso);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label2);
@@ -138,7 +160,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblPesquisa);
             this.Name = "FrmPesquisaCurso";
-            this.Text = "Pesquisa Curso";
+            this.Text = "Pesquisa por Curso";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -157,5 +179,7 @@
         private DataGridViewTextBoxColumn Nome;
         private DataGridViewTextBoxColumn CargaHoraria;
         private DataGridViewTextBoxColumn Vagas;
+        private Button btnRemoverCurso;
+        private Button btnAlterarCurso;
     }
 }

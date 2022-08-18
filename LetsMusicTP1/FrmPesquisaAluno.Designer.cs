@@ -34,25 +34,25 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.lblPesquisa = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnRemoverAluno = new System.Windows.Forms.Button();
+            this.btnAlterarAluno = new System.Windows.Forms.Button();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnRemoverAluno = new System.Windows.Forms.Button();
-            this.btnAlterarAluno = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(388, 82);
+            this.textBox1.Location = new System.Drawing.Point(286, 98);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(175, 23);
             this.textBox1.TabIndex = 2;
             // 
             // btnPesquisar
             // 
-            this.btnPesquisar.Location = new System.Drawing.Point(409, 156);
+            this.btnPesquisar.Location = new System.Drawing.Point(325, 148);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(75, 23);
             this.btnPesquisar.TabIndex = 4;
@@ -62,7 +62,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(343, 56);
+            this.label2.Location = new System.Drawing.Point(230, 72);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 15);
             this.label2.TabIndex = 5;
@@ -74,7 +74,7 @@
             this.comboBox1.Items.AddRange(new object[] {
             "Nome",
             "CPF"});
-            this.comboBox1.Location = new System.Drawing.Point(442, 53);
+            this.comboBox1.Location = new System.Drawing.Point(340, 69);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 23);
             this.comboBox1.TabIndex = 6;
@@ -82,11 +82,11 @@
             // lblPesquisa
             // 
             this.lblPesquisa.AutoSize = true;
-            this.lblPesquisa.Location = new System.Drawing.Point(332, 85);
+            this.lblPesquisa.Location = new System.Drawing.Point(230, 101);
             this.lblPesquisa.Name = "lblPesquisa";
-            this.lblPesquisa.Size = new System.Drawing.Size(40, 15);
+            this.lblPesquisa.Size = new System.Drawing.Size(43, 15);
             this.lblPesquisa.TabIndex = 0;
-            this.lblPesquisa.Text = "Nome";
+            this.lblPesquisa.Text = "Nome:";
             // 
             // dataGridView1
             // 
@@ -97,25 +97,43 @@
             this.Email,
             this.Telefone,
             this.CPF});
-            this.dataGridView1.Location = new System.Drawing.Point(53, 197);
+            this.dataGridView1.Location = new System.Drawing.Point(34, 200);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dataGridView1.Size = new System.Drawing.Size(843, 105);
+            this.dataGridView1.Size = new System.Drawing.Size(615, 105);
             this.dataGridView1.TabIndex = 7;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // btnRemoverAluno
+            // 
+            this.btnRemoverAluno.Location = new System.Drawing.Point(442, 339);
+            this.btnRemoverAluno.Name = "btnRemoverAluno";
+            this.btnRemoverAluno.Size = new System.Drawing.Size(75, 23);
+            this.btnRemoverAluno.TabIndex = 17;
+            this.btnRemoverAluno.Text = "Remover";
+            this.btnRemoverAluno.UseVisualStyleBackColor = true;
+            // 
+            // btnAlterarAluno
+            // 
+            this.btnAlterarAluno.Location = new System.Drawing.Point(227, 339);
+            this.btnAlterarAluno.Name = "btnAlterarAluno";
+            this.btnAlterarAluno.Size = new System.Drawing.Size(75, 23);
+            this.btnAlterarAluno.TabIndex = 16;
+            this.btnAlterarAluno.Text = "Alterar";
+            this.btnAlterarAluno.UseVisualStyleBackColor = true;
             // 
             // Nome
             // 
             this.Nome.HeaderText = "Nome";
             this.Nome.Name = "Nome";
-            this.Nome.Width = 300;
+            this.Nome.Width = 200;
             // 
             // Email
             // 
             this.Email.HeaderText = "E-mail";
             this.Email.Name = "Email";
-            this.Email.Width = 250;
+            this.Email.Width = 150;
             // 
             // Telefone
             // 
@@ -126,32 +144,13 @@
             // 
             this.CPF.HeaderText = "CPF";
             this.CPF.Name = "CPF";
-            this.CPF.Width = 150;
-            // 
-            // btnRemoverAluno
-            // 
-            this.btnRemoverAluno.Location = new System.Drawing.Point(511, 358);
-            this.btnRemoverAluno.Name = "btnRemoverAluno";
-            this.btnRemoverAluno.Size = new System.Drawing.Size(75, 23);
-            this.btnRemoverAluno.TabIndex = 17;
-            this.btnRemoverAluno.Text = "Remover";
-            this.btnRemoverAluno.UseVisualStyleBackColor = true;
-            // 
-            // btnAlterarAluno
-            // 
-            this.btnAlterarAluno.Location = new System.Drawing.Point(354, 358);
-            this.btnAlterarAluno.Name = "btnAlterarAluno";
-            this.btnAlterarAluno.Size = new System.Drawing.Size(75, 23);
-            this.btnAlterarAluno.TabIndex = 16;
-            this.btnAlterarAluno.Text = "Alterar";
-            this.btnAlterarAluno.UseVisualStyleBackColor = true;
             // 
             // FrmPesquisaAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(941, 434);
+            this.ClientSize = new System.Drawing.Size(684, 411);
             this.Controls.Add(this.btnRemoverAluno);
             this.Controls.Add(this.btnAlterarAluno);
             this.Controls.Add(this.dataGridView1);
@@ -163,7 +162,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmPesquisaAluno";
-            this.Text = "PesquisaAluno";
+            this.Text = "Pesquisa por Aluno";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -178,11 +177,11 @@
         private ComboBox comboBox1;
         private Label lblPesquisa;
         private DataGridView dataGridView1;
+        private Button btnRemoverAluno;
+        private Button btnAlterarAluno;
         private DataGridViewTextBoxColumn Nome;
         private DataGridViewTextBoxColumn Email;
         private DataGridViewTextBoxColumn Telefone;
         private DataGridViewTextBoxColumn CPF;
-        private Button btnRemoverAluno;
-        private Button btnAlterarAluno;
     }
 }

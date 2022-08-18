@@ -52,7 +52,7 @@
             this.sairToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(442, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(704, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -72,28 +72,28 @@
             this.cursoToolStripMenuItem,
             this.turmaToolStripMenuItem});
             this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
-            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.cadastroToolStripMenuItem.Text = "Cadastrar";
             this.cadastroToolStripMenuItem.Click += new System.EventHandler(this.cadastroToolStripMenuItem_Click);
             // 
             // alunoToolStripMenuItem
             // 
             this.alunoToolStripMenuItem.Name = "alunoToolStripMenuItem";
-            this.alunoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.alunoToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
             this.alunoToolStripMenuItem.Text = "Aluno";
             this.alunoToolStripMenuItem.Click += new System.EventHandler(this.alunoToolStripMenuItem_Click);
             // 
             // cursoToolStripMenuItem
             // 
             this.cursoToolStripMenuItem.Name = "cursoToolStripMenuItem";
-            this.cursoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cursoToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
             this.cursoToolStripMenuItem.Text = "Curso";
             this.cursoToolStripMenuItem.Click += new System.EventHandler(this.cursoToolStripMenuItem_Click);
             // 
             // turmaToolStripMenuItem
             // 
             this.turmaToolStripMenuItem.Name = "turmaToolStripMenuItem";
-            this.turmaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.turmaToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
             this.turmaToolStripMenuItem.Text = "Turma";
             this.turmaToolStripMenuItem.Click += new System.EventHandler(this.turmaToolStripMenuItem_Click);
             // 
@@ -104,27 +104,27 @@
             this.cursoToolStripMenuItem1,
             this.turmaToolStripMenuItem1});
             this.pesquisarToolStripMenuItem.Name = "pesquisarToolStripMenuItem";
-            this.pesquisarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pesquisarToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.pesquisarToolStripMenuItem.Text = "Pesquisar/Alterar";
             // 
             // alunoToolStripMenuItem1
             // 
             this.alunoToolStripMenuItem1.Name = "alunoToolStripMenuItem1";
-            this.alunoToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.alunoToolStripMenuItem1.Size = new System.Drawing.Size(108, 22);
             this.alunoToolStripMenuItem1.Text = "Aluno";
             this.alunoToolStripMenuItem1.Click += new System.EventHandler(this.alunoToolStripMenuItem1_Click);
             // 
             // cursoToolStripMenuItem1
             // 
             this.cursoToolStripMenuItem1.Name = "cursoToolStripMenuItem1";
-            this.cursoToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.cursoToolStripMenuItem1.Size = new System.Drawing.Size(108, 22);
             this.cursoToolStripMenuItem1.Text = "Curso";
             this.cursoToolStripMenuItem1.Click += new System.EventHandler(this.cursoToolStripMenuItem1_Click);
             // 
             // turmaToolStripMenuItem1
             // 
             this.turmaToolStripMenuItem1.Name = "turmaToolStripMenuItem1";
-            this.turmaToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.turmaToolStripMenuItem1.Size = new System.Drawing.Size(108, 22);
             this.turmaToolStripMenuItem1.Text = "Turma";
             this.turmaToolStripMenuItem1.Click += new System.EventHandler(this.turmaToolStripMenuItem1_Click);
             // 
@@ -147,7 +147,7 @@
             this.lblBemVindo.AutoSize = true;
             this.lblBemVindo.BackColor = System.Drawing.Color.Transparent;
             this.lblBemVindo.Font = new System.Drawing.Font("Segoe UI", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.lblBemVindo.Location = new System.Drawing.Point(106, 73);
+            this.lblBemVindo.Location = new System.Drawing.Point(225, 85);
             this.lblBemVindo.Name = "lblBemVindo";
             this.lblBemVindo.Size = new System.Drawing.Size(233, 25);
             this.lblBemVindo.TabIndex = 1;
@@ -160,7 +160,7 @@
             this.AutoSize = true;
             this.BackgroundImage = global::LetsMusicTP1.Presentation.Properties.Resources.fundo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(442, 401);
+            this.ClientSize = new System.Drawing.Size(704, 399);
             this.ControlBox = false;
             this.Controls.Add(this.lblBemVindo);
             this.Controls.Add(this.menuStrip1);

@@ -16,5 +16,10 @@ namespace LetsMusicTP1.Presentation
         {
             InitializeComponent();
         }
+
+        private void FrmPesquisaCurso_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

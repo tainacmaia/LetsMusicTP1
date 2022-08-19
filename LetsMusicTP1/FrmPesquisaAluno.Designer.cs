@@ -32,30 +32,32 @@
             this.dtgAlunos = new System.Windows.Forms.DataGridView();
             this.btnRemoverAluno = new System.Windows.Forms.Button();
             this.btnAlterarAluno = new System.Windows.Forms.Button();
+            this.lblTituloPesqAluno = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgAlunos)).BeginInit();
             this.SuspendLayout();
             // 
             // txtValorPesquisa
             // 
-            this.txtValorPesquisa.Location = new System.Drawing.Point(34, 46);
+            this.txtValorPesquisa.Location = new System.Drawing.Point(35, 55);
             this.txtValorPesquisa.Name = "txtValorPesquisa";
             this.txtValorPesquisa.PlaceholderText = "Digite dado para busca...";
-            this.txtValorPesquisa.Size = new System.Drawing.Size(175, 23);
-            this.txtValorPesquisa.TabIndex = 3;
+            this.txtValorPesquisa.Size = new System.Drawing.Size(235, 23);
+            this.txtValorPesquisa.TabIndex = 1;
             this.txtValorPesquisa.TextChanged += new System.EventHandler(this.txtValorPesquisa_TextChanged);
             // 
             // dtgAlunos
             // 
+            this.dtgAlunos.AllowUserToOrderColumns = true;
             this.dtgAlunos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dtgAlunos.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dtgAlunos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgAlunos.Location = new System.Drawing.Point(34, 92);
+            this.dtgAlunos.Location = new System.Drawing.Point(35, 95);
             this.dtgAlunos.Name = "dtgAlunos";
             this.dtgAlunos.ReadOnly = true;
             this.dtgAlunos.RowTemplate.Height = 25;
             this.dtgAlunos.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dtgAlunos.Size = new System.Drawing.Size(615, 213);
-            this.dtgAlunos.TabIndex = 1;
+            this.dtgAlunos.TabIndex = 0;
             this.dtgAlunos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // btnRemoverAluno
@@ -63,7 +65,7 @@
             this.btnRemoverAluno.Location = new System.Drawing.Point(442, 339);
             this.btnRemoverAluno.Name = "btnRemoverAluno";
             this.btnRemoverAluno.Size = new System.Drawing.Size(75, 23);
-            this.btnRemoverAluno.TabIndex = 17;
+            this.btnRemoverAluno.TabIndex = 3;
             this.btnRemoverAluno.Text = "Remover";
             this.btnRemoverAluno.UseVisualStyleBackColor = true;
             // 
@@ -72,9 +74,19 @@
             this.btnAlterarAluno.Location = new System.Drawing.Point(227, 339);
             this.btnAlterarAluno.Name = "btnAlterarAluno";
             this.btnAlterarAluno.Size = new System.Drawing.Size(75, 23);
-            this.btnAlterarAluno.TabIndex = 16;
+            this.btnAlterarAluno.TabIndex = 2;
             this.btnAlterarAluno.Text = "Alterar";
             this.btnAlterarAluno.UseVisualStyleBackColor = true;
+            // 
+            // lblTituloPesqAluno
+            // 
+            this.lblTituloPesqAluno.AutoSize = true;
+            this.lblTituloPesqAluno.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblTituloPesqAluno.Location = new System.Drawing.Point(283, 22);
+            this.lblTituloPesqAluno.Name = "lblTituloPesqAluno";
+            this.lblTituloPesqAluno.Size = new System.Drawing.Size(122, 17);
+            this.lblTituloPesqAluno.TabIndex = 11;
+            this.lblTituloPesqAluno.Text = "Pesquisa de Aluno";
             // 
             // FrmPesquisaAluno
             // 
@@ -82,6 +94,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(684, 411);
+            this.Controls.Add(this.lblTituloPesqAluno);
             this.Controls.Add(this.btnRemoverAluno);
             this.Controls.Add(this.btnAlterarAluno);
             this.Controls.Add(this.dtgAlunos);
@@ -103,5 +116,6 @@
         private DataGridView dtgAlunos;
         private Button btnRemoverAluno;
         private Button btnAlterarAluno;
+        private Label lblTituloPesqAluno;
     }
 }

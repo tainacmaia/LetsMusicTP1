@@ -28,53 +28,53 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnAdicionaAluno = new System.Windows.Forms.Button();
             this.lblCurso = new System.Windows.Forms.Label();
             this.cbbCurso = new System.Windows.Forms.ComboBox();
-            this.lblNomeAluno = new System.Windows.Forms.Label();
             this.btnCadastrarTurma = new System.Windows.Forms.Button();
             this.lblTituloCadTurma = new System.Windows.Forms.Label();
             this.btnFechar = new System.Windows.Forms.Button();
+            this.dtgAlunosCad = new System.Windows.Forms.DataGridView();
+            this.txtPesquisaAluno = new System.Windows.Forms.TextBox();
+            this.dtgAlunosCurso = new System.Windows.Forms.DataGridView();
+            this.lblVagasCurso = new System.Windows.Forms.Label();
+            this.lblAlunosCad = new System.Windows.Forms.Label();
+            this.lblAlunosMatr = new System.Windows.Forms.Label();
+            this.lblTotVagas = new System.Windows.Forms.Label();
+            this.btnRemoveAluno = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgAlunosCad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgAlunosCurso)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnBuscar
+            // btnAdicionaAluno
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(93, 133);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(114, 23);
-            this.btnBuscar.TabIndex = 2;
-            this.btnBuscar.Text = "Adicionar aluno";
-            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnAdicionaAluno.Location = new System.Drawing.Point(328, 197);
+            this.btnAdicionaAluno.Name = "btnAdicionaAluno";
+            this.btnAdicionaAluno.Size = new System.Drawing.Size(30, 23);
+            this.btnAdicionaAluno.TabIndex = 2;
+            this.btnAdicionaAluno.Text = ">";
+            this.btnAdicionaAluno.UseVisualStyleBackColor = true;
             // 
             // lblCurso
             // 
             this.lblCurso.AutoSize = true;
-            this.lblCurso.Location = new System.Drawing.Point(112, 82);
+            this.lblCurso.Location = new System.Drawing.Point(185, 58);
             this.lblCurso.Name = "lblCurso";
-            this.lblCurso.Size = new System.Drawing.Size(38, 15);
+            this.lblCurso.Size = new System.Drawing.Size(104, 15);
             this.lblCurso.TabIndex = 0;
-            this.lblCurso.Text = "Curso";
+            this.lblCurso.Text = "Selecione o Curso:";
             // 
             // cbbCurso
             // 
             this.cbbCurso.FormattingEnabled = true;
-            this.cbbCurso.Location = new System.Drawing.Point(173, 79);
+            this.cbbCurso.Location = new System.Drawing.Point(294, 55);
             this.cbbCurso.Name = "cbbCurso";
-            this.cbbCurso.Size = new System.Drawing.Size(121, 23);
+            this.cbbCurso.Size = new System.Drawing.Size(228, 23);
             this.cbbCurso.TabIndex = 4;
-            // 
-            // lblNomeAluno
-            // 
-            this.lblNomeAluno.AutoSize = true;
-            this.lblNomeAluno.Location = new System.Drawing.Point(240, 137);
-            this.lblNomeAluno.Name = "lblNomeAluno";
-            this.lblNomeAluno.Size = new System.Drawing.Size(92, 15);
-            this.lblNomeAluno.TabIndex = 5;
-            this.lblNomeAluno.Text = "Nome do Aluno";
             // 
             // btnCadastrarTurma
             // 
-            this.btnCadastrarTurma.Location = new System.Drawing.Point(112, 188);
+            this.btnCadastrarTurma.Location = new System.Drawing.Point(200, 365);
             this.btnCadastrarTurma.Name = "btnCadastrarTurma";
             this.btnCadastrarTurma.Size = new System.Drawing.Size(75, 23);
             this.btnCadastrarTurma.TabIndex = 6;
@@ -85,37 +85,122 @@
             // 
             this.lblTituloCadTurma.AutoSize = true;
             this.lblTituloCadTurma.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblTituloCadTurma.Location = new System.Drawing.Point(85, 40);
+            this.lblTituloCadTurma.Location = new System.Drawing.Point(281, 22);
             this.lblTituloCadTurma.Name = "lblTituloCadTurma";
-            this.lblTituloCadTurma.Size = new System.Drawing.Size(247, 17);
+            this.lblTituloCadTurma.Size = new System.Drawing.Size(124, 17);
             this.lblTituloCadTurma.TabIndex = 13;
-            this.lblTituloCadTurma.Text = "Insira os dados para cadastro do Curso";
+            this.lblTituloCadTurma.Text = "Cadastro de Turma";
             // 
             // btnFechar
             // 
-            this.btnFechar.Location = new System.Drawing.Point(257, 188);
+            this.btnFechar.Location = new System.Drawing.Point(400, 365);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(75, 23);
             this.btnFechar.TabIndex = 17;
             this.btnFechar.Text = "Fechar";
             this.btnFechar.UseVisualStyleBackColor = true;
             // 
+            // dtgAlunosCad
+            // 
+            this.dtgAlunosCad.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dtgAlunosCad.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgAlunosCad.Location = new System.Drawing.Point(30, 147);
+            this.dtgAlunosCad.Name = "dtgAlunosCad";
+            this.dtgAlunosCad.RowTemplate.Height = 25;
+            this.dtgAlunosCad.Size = new System.Drawing.Size(282, 181);
+            this.dtgAlunosCad.TabIndex = 18;
+            // 
+            // txtPesquisaAluno
+            // 
+            this.txtPesquisaAluno.Location = new System.Drawing.Point(30, 118);
+            this.txtPesquisaAluno.Name = "txtPesquisaAluno";
+            this.txtPesquisaAluno.PlaceholderText = "Digite dado para busca...";
+            this.txtPesquisaAluno.Size = new System.Drawing.Size(282, 23);
+            this.txtPesquisaAluno.TabIndex = 19;
+            // 
+            // dtgAlunosCurso
+            // 
+            this.dtgAlunosCurso.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dtgAlunosCurso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgAlunosCurso.Location = new System.Drawing.Point(374, 147);
+            this.dtgAlunosCurso.Name = "dtgAlunosCurso";
+            this.dtgAlunosCurso.RowTemplate.Height = 25;
+            this.dtgAlunosCurso.Size = new System.Drawing.Size(282, 181);
+            this.dtgAlunosCurso.TabIndex = 20;
+            // 
+            // lblVagasCurso
+            // 
+            this.lblVagasCurso.AutoSize = true;
+            this.lblVagasCurso.Location = new System.Drawing.Point(458, 126);
+            this.lblVagasCurso.Name = "lblVagasCurso";
+            this.lblVagasCurso.Size = new System.Drawing.Size(14, 15);
+            this.lblVagasCurso.TabIndex = 22;
+            this.lblVagasCurso.Text = "X";
+            // 
+            // lblAlunosCad
+            // 
+            this.lblAlunosCad.AutoSize = true;
+            this.lblAlunosCad.Location = new System.Drawing.Point(30, 100);
+            this.lblAlunosCad.Name = "lblAlunosCad";
+            this.lblAlunosCad.Size = new System.Drawing.Size(115, 15);
+            this.lblAlunosCad.TabIndex = 23;
+            this.lblAlunosCad.Text = "Alunos Cadastrados:";
+            // 
+            // lblAlunosMatr
+            // 
+            this.lblAlunosMatr.AutoSize = true;
+            this.lblAlunosMatr.Location = new System.Drawing.Point(374, 110);
+            this.lblAlunosMatr.Name = "lblAlunosMatr";
+            this.lblAlunosMatr.Size = new System.Drawing.Size(170, 15);
+            this.lblAlunosMatr.TabIndex = 24;
+            this.lblAlunosMatr.Text = "Alunos Matriculados no Curso:";
+            // 
+            // lblTotVagas
+            // 
+            this.lblTotVagas.AutoSize = true;
+            this.lblTotVagas.Location = new System.Drawing.Point(374, 126);
+            this.lblTotVagas.Name = "lblTotVagas";
+            this.lblTotVagas.Size = new System.Drawing.Size(87, 15);
+            this.lblTotVagas.TabIndex = 21;
+            this.lblTotVagas.Text = "Total de Vagas: ";
+            // 
+            // btnRemoveAluno
+            // 
+            this.btnRemoveAluno.Location = new System.Drawing.Point(328, 241);
+            this.btnRemoveAluno.Name = "btnRemoveAluno";
+            this.btnRemoveAluno.Size = new System.Drawing.Size(30, 23);
+            this.btnRemoveAluno.TabIndex = 25;
+            this.btnRemoveAluno.Text = "<";
+            this.btnRemoveAluno.UseVisualStyleBackColor = true;
+            // 
             // FrmCadastroTurma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(414, 261);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(684, 411);
+            this.Controls.Add(this.btnRemoveAluno);
+            this.Controls.Add(this.lblAlunosMatr);
+            this.Controls.Add(this.lblAlunosCad);
+            this.Controls.Add(this.lblVagasCurso);
+            this.Controls.Add(this.lblTotVagas);
+            this.Controls.Add(this.dtgAlunosCurso);
+            this.Controls.Add(this.txtPesquisaAluno);
+            this.Controls.Add(this.dtgAlunosCad);
             this.Controls.Add(this.btnFechar);
             this.Controls.Add(this.lblTituloCadTurma);
             this.Controls.Add(this.btnCadastrarTurma);
-            this.Controls.Add(this.lblNomeAluno);
             this.Controls.Add(this.cbbCurso);
-            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.btnAdicionaAluno);
             this.Controls.Add(this.lblCurso);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmCadastroTurma";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmCadastroTurma";
+            this.Text = "Cadastro Turma";
             this.Load += new System.EventHandler(this.FrmCadastroTurma_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgAlunosCad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgAlunosCurso)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -123,12 +208,19 @@
 
         #endregion
 
-        private Button btnBuscar;
+        private Button btnAdicionaAluno;
         private Label lblCurso;
         private ComboBox cbbCurso;
-        private Label lblNomeAluno;
         private Button btnCadastrarTurma;
         private Label lblTituloCadTurma;
         private Button btnFechar;
+        private DataGridView dtgAlunosCad;
+        private TextBox txtPesquisaAluno;
+        private DataGridView dtgAlunosCurso;
+        private Label lblVagasCurso;
+        private Label lblAlunosCad;
+        private Label lblAlunosMatr;
+        private Label lblTotVagas;
+        private Button btnRemoveAluno;
     }
 }

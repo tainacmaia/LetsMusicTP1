@@ -164,6 +164,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.lblBemVindo);
             this.Controls.Add(this.menuStrip1);
+            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMenuLetsMusic";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

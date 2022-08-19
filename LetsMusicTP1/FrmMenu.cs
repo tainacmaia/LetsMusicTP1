@@ -64,5 +64,10 @@ namespace LetsMusicTP1
             var form = new FrmPesquisaTurma();
             form.ShowDialog();
         }
+
+        private void frmMenuLetsMusic_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

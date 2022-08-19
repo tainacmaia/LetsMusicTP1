@@ -40,6 +40,7 @@
             this.mskCpf = new System.Windows.Forms.MaskedTextBox();
             this.lblTituloCadAluno = new System.Windows.Forms.Label();
             this.lblCampoObrig1 = new System.Windows.Forms.Label();
+            this.lblInstrucoes = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnCadastrarAluno
@@ -135,11 +136,11 @@
             // 
             this.lblTituloCadAluno.AutoSize = true;
             this.lblTituloCadAluno.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblTituloCadAluno.Location = new System.Drawing.Point(85, 40);
+            this.lblTituloCadAluno.Location = new System.Drawing.Point(140, 25);
             this.lblTituloCadAluno.Name = "lblTituloCadAluno";
-            this.lblTituloCadAluno.Size = new System.Drawing.Size(249, 17);
+            this.lblTituloCadAluno.Size = new System.Drawing.Size(122, 17);
             this.lblTituloCadAluno.TabIndex = 10;
-            this.lblTituloCadAluno.Text = "Insira os dados para cadastro do Aluno";
+            this.lblTituloCadAluno.Text = "Cadastro de Aluno";
             // 
             // lblCampoObrig1
             // 
@@ -151,11 +152,21 @@
             this.lblCampoObrig1.TabIndex = 11;
             this.lblCampoObrig1.Text = "* Campo Obrigatório";
             // 
+            // lblInstrucoes
+            // 
+            this.lblInstrucoes.AutoSize = true;
+            this.lblInstrucoes.Location = new System.Drawing.Point(79, 62);
+            this.lblInstrucoes.Name = "lblInstrucoes";
+            this.lblInstrucoes.Size = new System.Drawing.Size(157, 15);
+            this.lblInstrucoes.TabIndex = 12;
+            this.lblInstrucoes.Text = "Preencha os campos abaixo:";
+            // 
             // frmCadastroAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(414, 361);
+            this.Controls.Add(this.lblInstrucoes);
             this.Controls.Add(this.lblCampoObrig1);
             this.Controls.Add(this.lblTituloCadAluno);
             this.Controls.Add(this.mskCpf);
@@ -190,5 +201,6 @@
         private MaskedTextBox mskCpf;
         private Label lblTituloCadAluno;
         private Label lblCampoObrig1;
+        private Label lblInstrucoes;
     }
 }

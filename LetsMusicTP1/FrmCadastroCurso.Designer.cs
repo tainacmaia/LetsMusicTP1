@@ -39,6 +39,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnFechar = new System.Windows.Forms.Button();
             this.btnCadastrarCurso = new System.Windows.Forms.Button();
+            this.lblInstrucoes = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblNome
@@ -109,11 +110,11 @@
             // 
             this.lblTituloCadCurso.AutoSize = true;
             this.lblTituloCadCurso.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblTituloCadCurso.Location = new System.Drawing.Point(85, 40);
+            this.lblTituloCadCurso.Location = new System.Drawing.Point(140, 25);
             this.lblTituloCadCurso.Name = "lblTituloCadCurso";
-            this.lblTituloCadCurso.Size = new System.Drawing.Size(247, 17);
+            this.lblTituloCadCurso.Size = new System.Drawing.Size(120, 17);
             this.lblTituloCadCurso.TabIndex = 12;
-            this.lblTituloCadCurso.Text = "Insira os dados para cadastro do Curso";
+            this.lblTituloCadCurso.Text = "Cadastro de Curso";
             // 
             // label1
             // 
@@ -143,11 +144,21 @@
             this.btnCadastrarCurso.UseVisualStyleBackColor = true;
             this.btnCadastrarCurso.Click += new System.EventHandler(this.btnCadastrarCurso_Click);
             // 
+            // lblInstrucoes
+            // 
+            this.lblInstrucoes.AutoSize = true;
+            this.lblInstrucoes.Location = new System.Drawing.Point(85, 66);
+            this.lblInstrucoes.Name = "lblInstrucoes";
+            this.lblInstrucoes.Size = new System.Drawing.Size(157, 15);
+            this.lblInstrucoes.TabIndex = 17;
+            this.lblInstrucoes.Text = "Preencha os campos abaixo:";
+            // 
             // FrmCadastroCurso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(414, 361);
+            this.Controls.Add(this.lblInstrucoes);
             this.Controls.Add(this.btnFechar);
             this.Controls.Add(this.btnCadastrarCurso);
             this.Controls.Add(this.label1);
@@ -179,5 +190,6 @@
         private Label label1;
         private Button btnFechar;
         private Button btnCadastrarCurso;
+        private Label lblInstrucoes;
     }
 }

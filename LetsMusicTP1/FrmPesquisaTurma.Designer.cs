@@ -28,24 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtgTurma = new System.Windows.Forms.DataGridView();
             this.btnRemoverTurma = new System.Windows.Forms.Button();
             this.btnAlterarTurma = new System.Windows.Forms.Button();
             this.txtPesquisaTurma = new System.Windows.Forms.TextBox();
             this.lblTituloPesqTurma = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgTurma)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dtgTurma
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(35, 95);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dataGridView1.Size = new System.Drawing.Size(469, 185);
-            this.dataGridView1.TabIndex = 0;
+            this.dtgTurma.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dtgTurma.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgTurma.Location = new System.Drawing.Point(35, 95);
+            this.dtgTurma.Name = "dtgTurma";
+            this.dtgTurma.RowTemplate.Height = 25;
+            this.dtgTurma.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dtgTurma.Size = new System.Drawing.Size(469, 185);
+            this.dtgTurma.TabIndex = 0;
+            this.dtgTurma.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // btnRemoverTurma
             // 
@@ -72,6 +73,7 @@
             this.txtPesquisaTurma.PlaceholderText = "Digite dado para busca...";
             this.txtPesquisaTurma.Size = new System.Drawing.Size(175, 23);
             this.txtPesquisaTurma.TabIndex = 1;
+            this.txtPesquisaTurma.TextChanged += new System.EventHandler(this.txtPesquisaTurma_TextChanged);
             // 
             // lblTituloPesqTurma
             // 
@@ -92,12 +94,13 @@
             this.Controls.Add(this.txtPesquisaTurma);
             this.Controls.Add(this.btnRemoverTurma);
             this.Controls.Add(this.btnAlterarTurma);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dtgTurma);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmPesquisaTurma";
             this.Text = "Pesquisa Turma";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.FrmPesquisaTurma_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgTurma)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -105,7 +108,7 @@
 
         #endregion
 
-        private DataGridView dataGridView1;
+        private DataGridView dtgTurma;
         private Button btnRemoverTurma;
         private Button btnAlterarTurma;
         private TextBox txtPesquisaTurma;

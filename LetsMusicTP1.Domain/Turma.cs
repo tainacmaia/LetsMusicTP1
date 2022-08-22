@@ -2,8 +2,8 @@
 {
     public class Turma
     {
-        public List<Aluno> Alunos { get; set; }
+        public string NomeCurso { get; set; }
 
-        public Curso Curso { get; set; }
+        public string NomeAluno { get; set; }
     }
 }

@@ -50,9 +50,10 @@ namespace LetsMusicTP1.Repositories
 
         public static List<Aluno> BuscaAluno(string textoBusca)
         {
-            return listaAlunos.FindAll(x => (x.Nome.Contains(textoBusca) ||
+            textoBusca = textoBusca.ToLower();
+            return listaAlunos.FindAll(x => (x.Nome.ToLower().Contains(textoBusca) ||
                  x.Telefone.Contains(textoBusca) ||
-                 x.Email.Contains(textoBusca) ||
+                 x.Email.ToLower().Contains(textoBusca) ||
                  x.Cpf.Contains(textoBusca)
              )).ToList();
         }

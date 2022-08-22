@@ -17,6 +17,27 @@ namespace LetsMusicTP1
             {
                 cbbCurso.Items.Add(curso);
             }
+
+            List<string> alunosCad = RepositorioAluno.listaAlunos.Select(x => x.Nome).ToList();
+            foreach (var aluno in alunosCad)
+            {
+                ltbAlunosCad.Items.Add(aluno);
+            }
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void dtgAlunosCurso_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dtgAlunosCad_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

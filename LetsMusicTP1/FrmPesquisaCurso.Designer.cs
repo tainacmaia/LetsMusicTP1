@@ -72,6 +72,7 @@
             this.txtPesquisaCurso.PlaceholderText = "Digite dado para busca...";
             this.txtPesquisaCurso.Size = new System.Drawing.Size(175, 23);
             this.txtPesquisaCurso.TabIndex = 1;
+            this.txtPesquisaCurso.TextChanged += new System.EventHandler(this.txtPesquisaCurso_TextChanged);
             // 
             // lblTituloPesqCurso
             // 

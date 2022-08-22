@@ -34,16 +34,14 @@
             this.btnCadastrarTurma = new System.Windows.Forms.Button();
             this.lblTituloCadTurma = new System.Windows.Forms.Label();
             this.btnFechar = new System.Windows.Forms.Button();
-            this.dtgAlunosCad = new System.Windows.Forms.DataGridView();
             this.txtPesquisaAluno = new System.Windows.Forms.TextBox();
-            this.dtgAlunosCurso = new System.Windows.Forms.DataGridView();
             this.lblVagasCurso = new System.Windows.Forms.Label();
             this.lblAlunosCad = new System.Windows.Forms.Label();
             this.lblAlunosMatr = new System.Windows.Forms.Label();
             this.lblTotVagas = new System.Windows.Forms.Label();
             this.btnRemoveAluno = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgAlunosCad)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgAlunosCurso)).BeginInit();
+            this.ltbAlunosCad = new System.Windows.Forms.ListBox();
+            this.ltbAlunosMat = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // btnAdicionaAluno
@@ -99,16 +97,7 @@
             this.btnFechar.TabIndex = 17;
             this.btnFechar.Text = "Fechar";
             this.btnFechar.UseVisualStyleBackColor = true;
-            // 
-            // dtgAlunosCad
-            // 
-            this.dtgAlunosCad.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dtgAlunosCad.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgAlunosCad.Location = new System.Drawing.Point(30, 147);
-            this.dtgAlunosCad.Name = "dtgAlunosCad";
-            this.dtgAlunosCad.RowTemplate.Height = 25;
-            this.dtgAlunosCad.Size = new System.Drawing.Size(282, 181);
-            this.dtgAlunosCad.TabIndex = 18;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // txtPesquisaAluno
             // 
@@ -117,16 +106,6 @@
             this.txtPesquisaAluno.PlaceholderText = "Digite dado para busca...";
             this.txtPesquisaAluno.Size = new System.Drawing.Size(282, 23);
             this.txtPesquisaAluno.TabIndex = 19;
-            // 
-            // dtgAlunosCurso
-            // 
-            this.dtgAlunosCurso.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dtgAlunosCurso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgAlunosCurso.Location = new System.Drawing.Point(374, 147);
-            this.dtgAlunosCurso.Name = "dtgAlunosCurso";
-            this.dtgAlunosCurso.RowTemplate.Height = 25;
-            this.dtgAlunosCurso.Size = new System.Drawing.Size(282, 181);
-            this.dtgAlunosCurso.TabIndex = 20;
             // 
             // lblVagasCurso
             // 
@@ -173,20 +152,38 @@
             this.btnRemoveAluno.Text = "<";
             this.btnRemoveAluno.UseVisualStyleBackColor = true;
             // 
+            // ltbAlunosCad
+            // 
+            this.ltbAlunosCad.FormattingEnabled = true;
+            this.ltbAlunosCad.ItemHeight = 15;
+            this.ltbAlunosCad.Location = new System.Drawing.Point(30, 147);
+            this.ltbAlunosCad.Name = "ltbAlunosCad";
+            this.ltbAlunosCad.Size = new System.Drawing.Size(282, 184);
+            this.ltbAlunosCad.TabIndex = 26;
+            // 
+            // ltbAlunosMat
+            // 
+            this.ltbAlunosMat.FormattingEnabled = true;
+            this.ltbAlunosMat.ItemHeight = 15;
+            this.ltbAlunosMat.Location = new System.Drawing.Point(374, 147);
+            this.ltbAlunosMat.Name = "ltbAlunosMat";
+            this.ltbAlunosMat.Size = new System.Drawing.Size(282, 184);
+            this.ltbAlunosMat.TabIndex = 27;
+            // 
             // FrmCadastroTurma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(684, 411);
+            this.Controls.Add(this.ltbAlunosMat);
+            this.Controls.Add(this.ltbAlunosCad);
             this.Controls.Add(this.btnRemoveAluno);
             this.Controls.Add(this.lblAlunosMatr);
             this.Controls.Add(this.lblAlunosCad);
             this.Controls.Add(this.lblVagasCurso);
             this.Controls.Add(this.lblTotVagas);
-            this.Controls.Add(this.dtgAlunosCurso);
             this.Controls.Add(this.txtPesquisaAluno);
-            this.Controls.Add(this.dtgAlunosCad);
             this.Controls.Add(this.btnFechar);
             this.Controls.Add(this.lblTituloCadTurma);
             this.Controls.Add(this.btnCadastrarTurma);
@@ -199,8 +196,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro Turma";
             this.Load += new System.EventHandler(this.FrmCadastroTurma_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgAlunosCad)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgAlunosCurso)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -214,13 +209,13 @@
         private Button btnCadastrarTurma;
         private Label lblTituloCadTurma;
         private Button btnFechar;
-        private DataGridView dtgAlunosCad;
         private TextBox txtPesquisaAluno;
-        private DataGridView dtgAlunosCurso;
         private Label lblVagasCurso;
         private Label lblAlunosCad;
         private Label lblAlunosMatr;
         private Label lblTotVagas;
         private Button btnRemoveAluno;
+        private ListBox ltbAlunosCad;
+        private ListBox ltbAlunosMat;
     }
 }

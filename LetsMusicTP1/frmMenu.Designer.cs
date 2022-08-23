@@ -72,7 +72,7 @@
             this.cursoToolStripMenuItem,
             this.turmaToolStripMenuItem});
             this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
-            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cadastroToolStripMenuItem.Text = "Cadastrar";
             this.cadastroToolStripMenuItem.Click += new System.EventHandler(this.cadastroToolStripMenuItem_Click);
             // 
@@ -104,27 +104,27 @@
             this.cursoToolStripMenuItem1,
             this.turmaToolStripMenuItem1});
             this.pesquisarToolStripMenuItem.Name = "pesquisarToolStripMenuItem";
-            this.pesquisarToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.pesquisarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.pesquisarToolStripMenuItem.Text = "Pesquisar/Alterar";
             // 
             // alunoToolStripMenuItem1
             // 
             this.alunoToolStripMenuItem1.Name = "alunoToolStripMenuItem1";
-            this.alunoToolStripMenuItem1.Size = new System.Drawing.Size(108, 22);
+            this.alunoToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.alunoToolStripMenuItem1.Text = "Aluno";
             this.alunoToolStripMenuItem1.Click += new System.EventHandler(this.alunoToolStripMenuItem1_Click);
             // 
             // cursoToolStripMenuItem1
             // 
             this.cursoToolStripMenuItem1.Name = "cursoToolStripMenuItem1";
-            this.cursoToolStripMenuItem1.Size = new System.Drawing.Size(108, 22);
+            this.cursoToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.cursoToolStripMenuItem1.Text = "Curso";
             this.cursoToolStripMenuItem1.Click += new System.EventHandler(this.cursoToolStripMenuItem1_Click);
             // 
             // turmaToolStripMenuItem1
             // 
             this.turmaToolStripMenuItem1.Name = "turmaToolStripMenuItem1";
-            this.turmaToolStripMenuItem1.Size = new System.Drawing.Size(108, 22);
+            this.turmaToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.turmaToolStripMenuItem1.Text = "Turma";
             this.turmaToolStripMenuItem1.Click += new System.EventHandler(this.turmaToolStripMenuItem1_Click);
             // 
@@ -164,7 +164,6 @@
             this.ControlBox = false;
             this.Controls.Add(this.lblBemVindo);
             this.Controls.Add(this.menuStrip1);
-            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMenuLetsMusic";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

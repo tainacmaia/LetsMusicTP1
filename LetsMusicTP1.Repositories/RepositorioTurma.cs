@@ -6,12 +6,12 @@ namespace LetsMusicTP1.Repositories
     {
         public static Curso curso = RepositorioCurso.listaCurso.First(x => x.Nome == "Violão");
         public static List<Aluno> alunos = RepositorioAluno.listaAlunos.Where(x => x.Nome.StartsWith('M')).ToList();
-        //public static Aluno aluno = RepositorioAluno.listaAlunos.First(x => x.Nome.Contains("Taina"));
 
         public static Curso curso2 = RepositorioCurso.listaCurso.First(x => x.Nome == "Saxofone");
         public static List<Aluno> alunos2 = new List<Aluno>(RepositorioAluno.listaAlunos.GetRange(10, 25));
 
         public static List<Turma> listaTurma = new();
+
 
         public static void IniciaLista()
         {
@@ -33,6 +33,11 @@ namespace LetsMusicTP1.Repositories
             textoBusca = textoBusca.ToLower();
             return listaTurma.FindAll(x => (x.NomeCurso.ToLower().Contains(textoBusca)) ||
                  x.NomeAluno.ToLower().Contains(textoBusca)).ToList();
+        }
+        public static List<Turma> BuscaTurmaPorCurso(string textoBusca)
+        {
+            textoBusca = textoBusca.ToLower();
+            return listaTurma.FindAll(x => x.NomeCurso.ToLower().Contains(textoBusca)).ToList();
         }
     }
 }

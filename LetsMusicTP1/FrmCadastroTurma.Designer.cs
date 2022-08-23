@@ -52,6 +52,7 @@
             this.btnAdicionaAluno.TabIndex = 2;
             this.btnAdicionaAluno.Text = ">";
             this.btnAdicionaAluno.UseVisualStyleBackColor = true;
+            this.btnAdicionaAluno.Click += new System.EventHandler(this.btnAdicionaAluno_Click);
             // 
             // lblCurso
             // 
@@ -78,6 +79,7 @@
             this.btnCadastrarTurma.TabIndex = 6;
             this.btnCadastrarTurma.Text = "Cadastrar";
             this.btnCadastrarTurma.UseVisualStyleBackColor = true;
+            this.btnCadastrarTurma.Click += new System.EventHandler(this.btnCadastrarTurma_Click);
             // 
             // lblTituloCadTurma
             // 
@@ -106,6 +108,7 @@
             this.txtPesquisaAluno.PlaceholderText = "Digite dado para busca...";
             this.txtPesquisaAluno.Size = new System.Drawing.Size(282, 23);
             this.txtPesquisaAluno.TabIndex = 19;
+            this.txtPesquisaAluno.TextChanged += new System.EventHandler(this.txtPesquisaAluno_TextChanged);
             // 
             // lblVagasCurso
             // 
@@ -151,6 +154,7 @@
             this.btnRemoveAluno.TabIndex = 25;
             this.btnRemoveAluno.Text = "<";
             this.btnRemoveAluno.UseVisualStyleBackColor = true;
+            this.btnRemoveAluno.Click += new System.EventHandler(this.btnRemoveAluno_Click);
             // 
             // ltbAlunosCad
             // 

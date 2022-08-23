@@ -1,4 +1,5 @@
 using LetsMusicTP1.Presentation;
+using LetsMusicTP1.Repositories;
 
 namespace LetsMusicTP1
 {
@@ -6,6 +7,7 @@ namespace LetsMusicTP1
     {
         public frmMenuLetsMusic()
         {
+            RepositorioTurma.IniciaLista();
             InitializeComponent();
         }
 

@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dtgTurma = new System.Windows.Forms.DataGridView();
             this.btnRemoverTurma = new System.Windows.Forms.Button();
             this.btnAlterarTurma = new System.Windows.Forms.Button();
             this.txtPesquisaTurma = new System.Windows.Forms.TextBox();
             this.lblTituloPesqTurma = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dtgTurma)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,27 +46,33 @@
             this.dtgTurma.Name = "dtgTurma";
             this.dtgTurma.RowTemplate.Height = 25;
             this.dtgTurma.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dtgTurma.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgTurma.Size = new System.Drawing.Size(469, 185);
             this.dtgTurma.TabIndex = 0;
             this.dtgTurma.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // btnRemoverTurma
             // 
-            this.btnRemoverTurma.Location = new System.Drawing.Point(314, 307);
+            this.btnRemoverTurma.Location = new System.Drawing.Point(383, 307);
             this.btnRemoverTurma.Name = "btnRemoverTurma";
-            this.btnRemoverTurma.Size = new System.Drawing.Size(75, 23);
+            this.btnRemoverTurma.Size = new System.Drawing.Size(121, 23);
             this.btnRemoverTurma.TabIndex = 3;
-            this.btnRemoverTurma.Text = "Remover";
+            this.btnRemoverTurma.Tag = "";
+            this.btnRemoverTurma.Text = "Remover Turma";
+            this.toolTip1.SetToolTip(this.btnRemoverTurma, "Remover Turma Completa");
             this.btnRemoverTurma.UseVisualStyleBackColor = true;
+            this.btnRemoverTurma.Click += new System.EventHandler(this.btnRemoverTurma_Click);
             // 
             // btnAlterarTurma
             // 
-            this.btnAlterarTurma.Location = new System.Drawing.Point(157, 307);
+            this.btnAlterarTurma.Location = new System.Drawing.Point(35, 307);
             this.btnAlterarTurma.Name = "btnAlterarTurma";
-            this.btnAlterarTurma.Size = new System.Drawing.Size(75, 23);
+            this.btnAlterarTurma.Size = new System.Drawing.Size(129, 23);
             this.btnAlterarTurma.TabIndex = 2;
-            this.btnAlterarTurma.Text = "Alterar";
+            this.btnAlterarTurma.Text = "Alterar Turma";
+            this.toolTip1.SetToolTip(this.btnAlterarTurma, "Adicionar ou remover alunos de uma turma");
             this.btnAlterarTurma.UseVisualStyleBackColor = true;
+            this.btnAlterarTurma.Click += new System.EventHandler(this.btnAlterarTurma_Click);
             // 
             // txtPesquisaTurma
             // 
@@ -113,5 +121,6 @@
         private Button btnAlterarTurma;
         private TextBox txtPesquisaTurma;
         private Label lblTituloPesqTurma;
+        private ToolTip toolTip1;
     }
 }

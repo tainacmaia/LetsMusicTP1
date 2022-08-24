@@ -12,9 +12,12 @@ namespace LetsMusicTP1.Presentation
             InitializeComponent();
         }
 
-        private void txtPesquisaAluno_TextChanged(object sender, EventArgs e)
+        private async void txtPesquisaAluno_TextChanged(object sender, EventArgs e)
         {
             string textoDigitado = txtPesquisaAluno.Text.ToLower();
+            lblStatusBusca.Text = "Buscando...Por favor aguarde";
+            await Task.Delay(2000);
+            lblStatusBusca.Text = "";
             ltbAlunosCad.Items.Clear();
             var listaFiltrada = alunosCad.Where(x => x.ToLower().Contains(textoDigitado));
             foreach (var aluno in listaFiltrada)
@@ -44,7 +47,8 @@ namespace LetsMusicTP1.Presentation
 
         private void btnAdicionaAluno_Click(object sender, EventArgs e)
         {
-            if (!ltbAlunosMat.Items.Contains(ltbAlunosCad.SelectedItem))
+            if (!ltbAlunosMat.Items.Contains(ltbAlunosCad.SelectedItem) &&
+                ltbAlunosMat.Items.Count < int.Parse(lblVagasCurso.Text))
             {
                 ltbAlunosMat.Items.Add(ltbAlunosCad.SelectedItem);
             }
@@ -64,11 +68,16 @@ namespace LetsMusicTP1.Presentation
                 RepositorioTurma.listaTurma.Add(turma);
             }
             MessageBox.Show("Turma atualizada com sucesso!");
+            cbbCurso.ResetText();
+            ltbAlunosMat.Items.Clear();
+            txtPesquisaAluno.Clear();
+            lblVagasCurso.Text = "";
         }
 
         private void cbbCurso_SelectedIndexChanged(object sender, EventArgs e)
         {
             ltbAlunosMat.Items.Clear();
+            lblVagasCurso.Text = RepositorioCurso.listaCurso.Find(x => x.Nome == cbbCurso.SelectedItem.ToString()).Vagas;
             var lista = RepositorioTurma.listaTurma.FindAll(x => x.NomeCurso == cbbCurso.SelectedItem.ToString());
             foreach (var aluno in lista)
             {
@@ -79,6 +88,22 @@ namespace LetsMusicTP1.Presentation
         private void btnRemoveAluno_Click(object sender, EventArgs e)
         {
             ltbAlunosMat.Items.Remove(ltbAlunosMat.SelectedItem);
+        }
+
+        private void btnRemoverTurma_Click(object sender, EventArgs e)
+        {
+            var result = MessageBox.Show("Deseja mesmo remover uma turma completa?", "Aviso", MessageBoxButtons.OKCancel);
+            if (result == DialogResult.Cancel)
+            {
+                return;
+            }
+
+            if (cbbCurso.SelectedItem is not null)
+            {
+                RepositorioTurma.listaTurma.RemoveAll(x => x.NomeCurso == cbbCurso.SelectedItem.ToString());
+                ltbAlunosMat.Items.Clear();
+                cbbCurso.Items.Remove(cbbCurso.SelectedItem);
+            }
         }
     }
 }

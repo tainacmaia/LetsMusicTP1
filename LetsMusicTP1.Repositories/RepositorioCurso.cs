@@ -7,7 +7,7 @@ namespace LetsMusicTP1.Repositories
         public static List<Curso> listaCurso = new()
         {
             new Curso { Nome = "Canto", CargaHoraria = "150", Vagas = "4" },
-            new Curso { Nome = "Violão", CargaHoraria = "80", Vagas = "6" },
+            new Curso { Nome = "Violão", CargaHoraria = "80", Vagas = "11" },
             new Curso { Nome = "Piano", CargaHoraria = "200", Vagas = "4" },
             new Curso { Nome = "Bateria", CargaHoraria = "160", Vagas = "4" },
             new Curso { Nome = "Harpa", CargaHoraria = "130", Vagas = "5" },

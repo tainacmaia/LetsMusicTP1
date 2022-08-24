@@ -27,5 +27,10 @@ namespace LetsMusicTP1
                 MessageBox.Show(msg);
             }
         }
+
+        private void frmCadastroAluno_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

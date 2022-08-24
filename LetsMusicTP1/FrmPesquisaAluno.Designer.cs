@@ -33,6 +33,15 @@
             this.btnRemoverAluno = new System.Windows.Forms.Button();
             this.btnAlterarAluno = new System.Windows.Forms.Button();
             this.lblTituloPesqAluno = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.lblStatusBusca = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgAlunos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,24 +68,27 @@
             this.dtgAlunos.Size = new System.Drawing.Size(615, 213);
             this.dtgAlunos.TabIndex = 0;
             this.dtgAlunos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dtgAlunos.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dtgAlunos_RowHeaderMouseClick);
             // 
             // btnRemoverAluno
             // 
-            this.btnRemoverAluno.Location = new System.Drawing.Point(442, 339);
+            this.btnRemoverAluno.Location = new System.Drawing.Point(416, 467);
             this.btnRemoverAluno.Name = "btnRemoverAluno";
             this.btnRemoverAluno.Size = new System.Drawing.Size(75, 23);
             this.btnRemoverAluno.TabIndex = 3;
             this.btnRemoverAluno.Text = "Remover";
             this.btnRemoverAluno.UseVisualStyleBackColor = true;
+            this.btnRemoverAluno.Click += new System.EventHandler(this.btnRemoverAluno_Click);
             // 
             // btnAlterarAluno
             // 
-            this.btnAlterarAluno.Location = new System.Drawing.Point(227, 339);
+            this.btnAlterarAluno.Location = new System.Drawing.Point(201, 467);
             this.btnAlterarAluno.Name = "btnAlterarAluno";
             this.btnAlterarAluno.Size = new System.Drawing.Size(75, 23);
             this.btnAlterarAluno.TabIndex = 2;
             this.btnAlterarAluno.Text = "Alterar";
             this.btnAlterarAluno.UseVisualStyleBackColor = true;
+            this.btnAlterarAluno.Click += new System.EventHandler(this.btnAlterarAluno_Click);
             // 
             // lblTituloPesqAluno
             // 
@@ -88,12 +100,94 @@
             this.lblTituloPesqAluno.TabIndex = 11;
             this.lblTituloPesqAluno.Text = "Pesquisa de Aluno";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(53, 343);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(28, 15);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "CPF";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(308, 346);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(40, 15);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Nome";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(53, 395);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(51, 15);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Telefone";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(307, 395);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(41, 15);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "E-mail";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(110, 340);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(151, 23);
+            this.textBox1.TabIndex = 16;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(365, 343);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(285, 23);
+            this.textBox2.TabIndex = 17;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(129, 392);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(132, 23);
+            this.textBox3.TabIndex = 18;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(365, 392);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(285, 23);
+            this.textBox4.TabIndex = 19;
+            // 
+            // lblStatusBusca
+            // 
+            this.lblStatusBusca.AutoSize = true;
+            this.lblStatusBusca.Location = new System.Drawing.Point(283, 58);
+            this.lblStatusBusca.Name = "lblStatusBusca";
+            this.lblStatusBusca.Size = new System.Drawing.Size(0, 15);
+            this.lblStatusBusca.TabIndex = 20;
+            // 
             // FrmPesquisaAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(684, 411);
+            this.ClientSize = new System.Drawing.Size(684, 502);
+            this.Controls.Add(this.lblStatusBusca);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblTituloPesqAluno);
             this.Controls.Add(this.btnRemoverAluno);
             this.Controls.Add(this.btnAlterarAluno);
@@ -102,6 +196,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmPesquisaAluno";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pesquisa Alunos";
             this.Load += new System.EventHandler(this.FrmPesquisaAluno_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgAlunos)).EndInit();
@@ -117,5 +212,14 @@
         private Button btnRemoverAluno;
         private Button btnAlterarAluno;
         private Label lblTituloPesqAluno;
+        private Label label1;
+        private Label label2;
+        private Label label3;
+        private Label label4;
+        private TextBox textBox1;
+        private TextBox textBox2;
+        private TextBox textBox3;
+        private TextBox textBox4;
+        private Label lblStatusBusca;
     }
 }

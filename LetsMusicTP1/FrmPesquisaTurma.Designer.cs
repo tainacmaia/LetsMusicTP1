@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dtgTurma = new System.Windows.Forms.DataGridView();
-            this.btnRemoverTurma = new System.Windows.Forms.Button();
             this.btnAlterarTurma = new System.Windows.Forms.Button();
             this.txtPesquisaTurma = new System.Windows.Forms.TextBox();
             this.lblTituloPesqTurma = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.lblStatusBusca = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgTurma)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,18 +50,6 @@
             this.dtgTurma.Size = new System.Drawing.Size(469, 185);
             this.dtgTurma.TabIndex = 0;
             this.dtgTurma.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // btnRemoverTurma
-            // 
-            this.btnRemoverTurma.Location = new System.Drawing.Point(383, 307);
-            this.btnRemoverTurma.Name = "btnRemoverTurma";
-            this.btnRemoverTurma.Size = new System.Drawing.Size(121, 23);
-            this.btnRemoverTurma.TabIndex = 3;
-            this.btnRemoverTurma.Tag = "";
-            this.btnRemoverTurma.Text = "Remover Turma";
-            this.toolTip1.SetToolTip(this.btnRemoverTurma, "Remover Turma Completa");
-            this.btnRemoverTurma.UseVisualStyleBackColor = true;
-            this.btnRemoverTurma.Click += new System.EventHandler(this.btnRemoverTurma_Click);
             // 
             // btnAlterarTurma
             // 
@@ -93,19 +81,28 @@
             this.lblTituloPesqTurma.TabIndex = 12;
             this.lblTituloPesqTurma.Text = "Pesquisa de Turma";
             // 
+            // lblStatusBusca
+            // 
+            this.lblStatusBusca.AutoSize = true;
+            this.lblStatusBusca.Location = new System.Drawing.Point(216, 58);
+            this.lblStatusBusca.Name = "lblStatusBusca";
+            this.lblStatusBusca.Size = new System.Drawing.Size(0, 15);
+            this.lblStatusBusca.TabIndex = 21;
+            // 
             // FrmPesquisaTurma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(534, 361);
+            this.Controls.Add(this.lblStatusBusca);
             this.Controls.Add(this.lblTituloPesqTurma);
             this.Controls.Add(this.txtPesquisaTurma);
-            this.Controls.Add(this.btnRemoverTurma);
             this.Controls.Add(this.btnAlterarTurma);
             this.Controls.Add(this.dtgTurma);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmPesquisaTurma";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pesquisa Turma";
             this.Load += new System.EventHandler(this.FrmPesquisaTurma_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgTurma)).EndInit();
@@ -117,10 +114,10 @@
         #endregion
 
         private DataGridView dtgTurma;
-        private Button btnRemoverTurma;
         private Button btnAlterarTurma;
         private TextBox txtPesquisaTurma;
         private Label lblTituloPesqTurma;
         private ToolTip toolTip1;
+        private Label lblStatusBusca;
     }
 }

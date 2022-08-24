@@ -45,7 +45,8 @@ namespace LetsMusicTP1
 
         private void btnAdicionaAluno_Click(object sender, EventArgs e)
         {
-            if (!ltbAlunosMat.Items.Contains(ltbAlunosCad.SelectedItem))
+            if (!ltbAlunosMat.Items.Contains(ltbAlunosCad.SelectedItem) &&
+                ltbAlunosMat.Items.Count < int.Parse(lblVagasCurso.Text))
             {
                 ltbAlunosMat.Items.Add(ltbAlunosCad.SelectedItem);
             }
@@ -74,6 +75,20 @@ namespace LetsMusicTP1
                 RepositorioTurma.listaTurma.Add(turma);
             }
             MessageBox.Show("Turma cadastrada com sucesso!");
+            cbbCurso.ResetText();
+            ltbAlunosMat.Items.Clear();
+            txtPesquisaAluno.Clear();
+            lblVagasCurso.Text = "";
+        }
+
+        private void cbbCurso_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lblVagasCurso.Text = RepositorioCurso.listaCurso.Find(x => x.Nome == cbbCurso.SelectedItem.ToString()).Vagas;
+        }
+
+        private void lblVagasCurso_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

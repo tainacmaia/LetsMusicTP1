@@ -70,6 +70,7 @@
             this.cbbCurso.Name = "cbbCurso";
             this.cbbCurso.Size = new System.Drawing.Size(228, 23);
             this.cbbCurso.TabIndex = 4;
+            this.cbbCurso.SelectedIndexChanged += new System.EventHandler(this.cbbCurso_SelectedIndexChanged);
             // 
             // btnCadastrarTurma
             // 
@@ -118,6 +119,7 @@
             this.lblVagasCurso.Size = new System.Drawing.Size(14, 15);
             this.lblVagasCurso.TabIndex = 22;
             this.lblVagasCurso.Text = "X";
+            this.lblVagasCurso.Click += new System.EventHandler(this.lblVagasCurso_Click);
             // 
             // lblAlunosCad
             // 

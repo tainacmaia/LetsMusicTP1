@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.ltbAlunosMat = new System.Windows.Forms.ListBox();
             this.ltbAlunosCad = new System.Windows.Forms.ListBox();
             this.btnRemoveAluno = new System.Windows.Forms.Button();
@@ -42,6 +43,9 @@
             this.cbbCurso = new System.Windows.Forms.ComboBox();
             this.btnAdicionaAluno = new System.Windows.Forms.Button();
             this.lblCurso = new System.Windows.Forms.Label();
+            this.btnRemoverTurma = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.lblStatusBusca = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // ltbAlunosMat
@@ -119,7 +123,7 @@
             // 
             // btnFechar
             // 
-            this.btnFechar.Location = new System.Drawing.Point(457, 385);
+            this.btnFechar.Location = new System.Drawing.Point(515, 385);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(75, 23);
             this.btnFechar.TabIndex = 33;
@@ -139,11 +143,12 @@
             // 
             // btnAtualizarTurma
             // 
-            this.btnAtualizarTurma.Location = new System.Drawing.Point(257, 385);
+            this.btnAtualizarTurma.Location = new System.Drawing.Point(226, 385);
             this.btnAtualizarTurma.Name = "btnAtualizarTurma";
             this.btnAtualizarTurma.Size = new System.Drawing.Size(75, 23);
             this.btnAtualizarTurma.TabIndex = 31;
             this.btnAtualizarTurma.Text = "Atualizar";
+            this.toolTip1.SetToolTip(this.btnAtualizarTurma, "Adiciona e remove alunos de uma turma");
             this.btnAtualizarTurma.UseVisualStyleBackColor = true;
             this.btnAtualizarTurma.Click += new System.EventHandler(this.btnAtualizarTurma_Click);
             // 
@@ -175,11 +180,33 @@
             this.lblCurso.TabIndex = 28;
             this.lblCurso.Text = "Selecione o Curso:";
             // 
+            // btnRemoverTurma
+            // 
+            this.btnRemoverTurma.Location = new System.Drawing.Point(351, 385);
+            this.btnRemoverTurma.Name = "btnRemoverTurma";
+            this.btnRemoverTurma.Size = new System.Drawing.Size(121, 23);
+            this.btnRemoverTurma.TabIndex = 42;
+            this.btnRemoverTurma.Tag = "";
+            this.btnRemoverTurma.Text = "Remover Turma";
+            this.toolTip1.SetToolTip(this.btnRemoverTurma, "Remove uma turma inteira");
+            this.btnRemoverTurma.UseVisualStyleBackColor = true;
+            this.btnRemoverTurma.Click += new System.EventHandler(this.btnRemoverTurma_Click);
+            // 
+            // lblStatusBusca
+            // 
+            this.lblStatusBusca.AutoSize = true;
+            this.lblStatusBusca.Location = new System.Drawing.Point(202, 120);
+            this.lblStatusBusca.Name = "lblStatusBusca";
+            this.lblStatusBusca.Size = new System.Drawing.Size(0, 15);
+            this.lblStatusBusca.TabIndex = 43;
+            // 
             // FrmAlterarTurma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblStatusBusca);
+            this.Controls.Add(this.btnRemoverTurma);
             this.Controls.Add(this.ltbAlunosMat);
             this.Controls.Add(this.ltbAlunosCad);
             this.Controls.Add(this.btnRemoveAluno);
@@ -195,6 +222,7 @@
             this.Controls.Add(this.btnAdicionaAluno);
             this.Controls.Add(this.lblCurso);
             this.Name = "FrmAlterarTurma";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAlterarTurma";
             this.Load += new System.EventHandler(this.FrmAlterarTurma_Load);
             this.ResumeLayout(false);
@@ -218,5 +246,8 @@
         private ComboBox cbbCurso;
         private Button btnAdicionaAluno;
         private Label lblCurso;
+        private ToolTip toolTip1;
+        private Button btnRemoverTurma;
+        private Label lblStatusBusca;
     }
 }

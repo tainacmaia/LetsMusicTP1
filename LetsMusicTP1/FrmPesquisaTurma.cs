@@ -23,45 +23,15 @@ namespace LetsMusicTP1.Presentation
             dtgTurma.DataSource = source;
         }
 
-        private void txtPesquisaTurma_TextChanged(object sender, EventArgs e)
+        private async void txtPesquisaTurma_TextChanged(object sender, EventArgs e)
         {
             string textoDigitado = txtPesquisaTurma.Text;
             var source = new BindingSource();
+            lblStatusBusca.Text = "Buscando...Por favor aguarde";
+            await Task.Delay(2000);
+            lblStatusBusca.Text = "";
             source.DataSource = RepositorioTurma.BuscaTurma(textoDigitado);
             dtgTurma.DataSource = source;
-        }
-
-        private void btnRemoverTurma_Click(object sender, EventArgs e)
-        {
-            var result = MessageBox.Show("Deseja mesmo remover uma turma completa?", "Aviso", MessageBoxButtons.OKCancel);
-            if (result == DialogResult.Cancel)
-            {
-                return;
-            }
-
-            if (dtgTurma.SelectedRows.Count > 0)
-            {
-                Turma selected = (Turma)dtgTurma.CurrentRow.DataBoundItem;
-
-                RepositorioTurma.listaTurma.RemoveAll(x => x.NomeCurso == selected.NomeCurso);
-
-                var bindingList = new BindingList<Turma>(RepositorioTurma.listaTurma);
-                var source = new BindingSource(bindingList, null);
-                dtgTurma.DataSource = source;
-            }
-        }
-
-        private void btnRemoverAluno_Click(object sender, EventArgs e)
-        {
-            if (dtgTurma.SelectedRows.Count > 0)
-            {
-                Turma selected = (Turma)dtgTurma.CurrentRow.DataBoundItem;
-                RepositorioTurma.listaTurma.Remove(selected);
-
-                var bindingList = new BindingList<Turma>(RepositorioTurma.listaTurma);
-                var source = new BindingSource(bindingList, null);
-                dtgTurma.DataSource = source;
-            }
         }
 
         private void btnAlterarTurma_Click(object sender, EventArgs e)

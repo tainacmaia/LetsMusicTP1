@@ -182,6 +182,7 @@
             this.Name = "frmCadastroAluno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Aluno";
+            this.Load += new System.EventHandler(this.frmCadastroAluno_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

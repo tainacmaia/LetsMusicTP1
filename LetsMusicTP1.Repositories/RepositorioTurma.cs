@@ -28,6 +28,11 @@ namespace LetsMusicTP1.Repositories
             }
         }
 
+        public static void RegistrarTurma(Turma novaTurma)
+        {
+            listaTurma.Add(novaTurma);
+        }
+
         public static List<Turma> BuscaTurma(string textoBusca)
         {
             textoBusca = textoBusca.ToLower();
@@ -37,7 +42,17 @@ namespace LetsMusicTP1.Repositories
         public static List<Turma> BuscaTurmaPorCurso(string textoBusca)
         {
             textoBusca = textoBusca.ToLower();
-            return listaTurma.FindAll(x => x.NomeCurso.ToLower().Contains(textoBusca)).ToList();
+
+            return listaTurma.FindAll(x => x.NomeCurso.ToLower() == textoBusca).ToList();
+        }
+        public static List<string> ListaCursosComTurma()
+        {
+            return listaTurma.Select(x => x.NomeCurso).Distinct().ToList();
+        }
+
+        public static void RemoveTurmasCurso(string curso)
+        {
+            listaTurma.RemoveAll(x => x.NomeCurso == curso);
         }
     }
 }

@@ -24,5 +24,9 @@ namespace LetsMusicTP1.Services
                 return "Aluno Cadastrado com Sucesso";
             }
         }
+        public static List<Aluno> PesquisarAlunosPorNome(string textoDigitado)
+        {
+            return RepositorioAluno.BuscaAlunosPorNome(textoDigitado);
+        }
     }
 }

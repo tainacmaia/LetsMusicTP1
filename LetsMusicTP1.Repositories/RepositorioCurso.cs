@@ -35,6 +35,10 @@ namespace LetsMusicTP1.Repositories
                  x.Vagas.Contains(textoBusca)
              )).ToList();
         }
+        public static string BuscaVagasCurso(string curso)
+        {
+            return listaCurso.Find(x => x.Nome == curso).Vagas;
+        }
     }
 
 }

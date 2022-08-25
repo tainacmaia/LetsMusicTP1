@@ -1,5 +1,6 @@
 ﻿using LetsMusicTP1.Domain;
 using LetsMusicTP1.Repositories;
+using LetsMusicTP1.Services;
 using System.Data;
 
 namespace LetsMusicTP1.Presentation
@@ -19,16 +20,16 @@ namespace LetsMusicTP1.Presentation
             await Task.Delay(2000);
             lblStatusBusca.Text = "";
             ltbAlunosCad.Items.Clear();
-            var listaFiltrada = alunosCad.Where(x => x.ToLower().Contains(textoDigitado));
+            var listaFiltrada = ServicesAluno.PesquisarAlunosPorNome(textoDigitado);
             foreach (var aluno in listaFiltrada)
             {
-                ltbAlunosCad.Items.Add(aluno);
+                ltbAlunosCad.Items.Add(aluno.Nome);
             }
         }
 
         private void FrmAlterarTurma_Load(object sender, EventArgs e)
         {
-            List<string> cursos = RepositorioTurma.listaTurma.Select(x => x.NomeCurso).Distinct().ToList();
+            List<string> cursos = ServicesTurma.ListaCursosTurma();
             foreach (var curso in cursos)
             {
                 cbbCurso.Items.Add(curso);
@@ -47,11 +48,12 @@ namespace LetsMusicTP1.Presentation
 
         private void btnAdicionaAluno_Click(object sender, EventArgs e)
         {
-            if (!ltbAlunosMat.Items.Contains(ltbAlunosCad.SelectedItem) &&
-                ltbAlunosMat.Items.Count < int.Parse(lblVagasCurso.Text))
+            if (cbbCurso is not null && !ltbAlunosMat.Items.Contains(ltbAlunosCad.SelectedItem) &&
+            ltbAlunosMat.Items.Count < int.Parse(lblVagasCurso.Text))
             {
                 ltbAlunosMat.Items.Add(ltbAlunosCad.SelectedItem);
             }
+
         }
 
         private void btnAtualizarTurma_Click(object sender, EventArgs e)
@@ -61,11 +63,11 @@ namespace LetsMusicTP1.Presentation
                 MessageBox.Show("Preencha todos os campos obrigatórios!");
                 return;
             }
-            RepositorioTurma.listaTurma.RemoveAll(x => x.NomeCurso == cbbCurso.SelectedItem.ToString());
+            ServicesTurma.RemoveTurmasDeCurso(cbbCurso.SelectedItem.ToString());
             foreach (var aluno in ltbAlunosMat.Items)
             {
                 Turma turma = new Turma() { NomeAluno = aluno.ToString(), NomeCurso = cbbCurso.SelectedItem.ToString() };
-                RepositorioTurma.listaTurma.Add(turma);
+                ServicesTurma.CadastrarTurma(turma);
             }
             MessageBox.Show("Turma atualizada com sucesso!");
             cbbCurso.ResetText();
@@ -77,8 +79,9 @@ namespace LetsMusicTP1.Presentation
         private void cbbCurso_SelectedIndexChanged(object sender, EventArgs e)
         {
             ltbAlunosMat.Items.Clear();
-            lblVagasCurso.Text = RepositorioCurso.listaCurso.Find(x => x.Nome == cbbCurso.SelectedItem.ToString()).Vagas;
-            var lista = RepositorioTurma.listaTurma.FindAll(x => x.NomeCurso == cbbCurso.SelectedItem.ToString());
+            lblVagasCurso.Text = ServicesCurso.PesquisaVagasCurso(cbbCurso.SelectedItem.ToString());
+            var lista = ServicesTurma.ListaTurmasCurso(cbbCurso.SelectedItem.ToString());
+
             foreach (var aluno in lista)
             {
                 ltbAlunosMat.Items.Add(aluno.NomeAluno);
@@ -100,7 +103,7 @@ namespace LetsMusicTP1.Presentation
 
             if (cbbCurso.SelectedItem is not null)
             {
-                RepositorioTurma.listaTurma.RemoveAll(x => x.NomeCurso == cbbCurso.SelectedItem.ToString());
+                ServicesTurma.RemoveTurmasDeCurso(cbbCurso.SelectedItem.ToString());
                 ltbAlunosMat.Items.Clear();
                 cbbCurso.Items.Remove(cbbCurso.SelectedItem);
             }

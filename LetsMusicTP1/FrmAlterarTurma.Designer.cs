@@ -103,8 +103,9 @@
             this.lblVagasCurso.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblVagasCurso.Location = new System.Drawing.Point(520, 146);
             this.lblVagasCurso.Name = "lblVagasCurso";
-            this.lblVagasCurso.Size = new System.Drawing.Size(0, 15);
+            this.lblVagasCurso.Size = new System.Drawing.Size(14, 15);
             this.lblVagasCurso.TabIndex = 36;
+            this.lblVagasCurso.Text = "0";
             // 
             // lblTotVagas
             // 

@@ -23,5 +23,9 @@ namespace LetsMusicTP1.Services
                 return "Curso Cadastrado com Sucesso";
             }
         }
+        public static string PesquisaVagasCurso(string curso)
+        {
+            return RepositorioCurso.BuscaVagasCurso(curso);
+        }
     }
 }

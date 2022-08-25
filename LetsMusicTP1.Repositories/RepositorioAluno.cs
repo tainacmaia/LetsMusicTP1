@@ -61,9 +61,13 @@ namespace LetsMusicTP1.Repositories
         {
             return listaAlunos.Find(a => a.Cpf == cpf);
         }
-        public static Aluno BuscaAlunoPorNome(string nome)
+        public static List<Aluno> BuscaAlunosPorNome(string nome)
         {
-            return listaAlunos.Find(a => a.Nome == nome);
+            return listaAlunos.FindAll(a => a.Nome.ToLower().Contains(nome));
+        }
+        public static List<Aluno> ListaTodosAlunos()
+        {
+            return listaAlunos;
         }
     }
 }

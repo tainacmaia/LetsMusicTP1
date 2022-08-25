@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCadastroCurso));
             this.lblNome = new System.Windows.Forms.Label();
             this.lblCargaHoraria = new System.Windows.Forms.Label();
             this.lblVagas = new System.Windows.Forms.Label();
@@ -45,29 +46,32 @@
             // lblNome
             // 
             this.lblNome.AutoSize = true;
+            this.lblNome.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblNome.Location = new System.Drawing.Point(85, 98);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(48, 15);
+            this.lblNome.Size = new System.Drawing.Size(49, 15);
             this.lblNome.TabIndex = 0;
             this.lblNome.Text = "Nome:*";
             // 
             // lblCargaHoraria
             // 
             this.lblCargaHoraria.AutoSize = true;
+            this.lblCargaHoraria.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblCargaHoraria.Location = new System.Drawing.Point(85, 141);
             this.lblCargaHoraria.Name = "lblCargaHoraria";
-            this.lblCargaHoraria.Size = new System.Drawing.Size(80, 15);
+            this.lblCargaHoraria.Size = new System.Drawing.Size(87, 15);
             this.lblCargaHoraria.TabIndex = 1;
-            this.lblCargaHoraria.Text = "Carga Horária";
+            this.lblCargaHoraria.Text = "Carga Horária*";
             // 
             // lblVagas
             // 
             this.lblVagas.AutoSize = true;
+            this.lblVagas.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblVagas.Location = new System.Drawing.Point(85, 179);
             this.lblVagas.Name = "lblVagas";
-            this.lblVagas.Size = new System.Drawing.Size(37, 15);
+            this.lblVagas.Size = new System.Drawing.Size(43, 15);
             this.lblVagas.TabIndex = 2;
-            this.lblVagas.Text = "Vagas";
+            this.lblVagas.Text = "Vagas*";
             // 
             // mskCarga
             // 
@@ -75,7 +79,7 @@
             this.mskCarga.Mask = "00000";
             this.mskCarga.Name = "mskCarga";
             this.mskCarga.Size = new System.Drawing.Size(86, 23);
-            this.mskCarga.TabIndex = 3;
+            this.mskCarga.TabIndex = 2;
             this.mskCarga.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.mskCarga.ValidatingType = typeof(int);
             // 
@@ -85,7 +89,7 @@
             this.mskVagas.Mask = "00000";
             this.mskVagas.Name = "mskVagas";
             this.mskVagas.Size = new System.Drawing.Size(112, 23);
-            this.mskVagas.TabIndex = 4;
+            this.mskVagas.TabIndex = 3;
             this.mskVagas.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.mskVagas.ValidatingType = typeof(int);
             // 
@@ -94,7 +98,7 @@
             this.txtNomeCurso.Location = new System.Drawing.Point(139, 95);
             this.txtNomeCurso.Name = "txtNomeCurso";
             this.txtNomeCurso.Size = new System.Drawing.Size(137, 23);
-            this.txtNomeCurso.TabIndex = 5;
+            this.txtNomeCurso.TabIndex = 1;
             // 
             // lblCampoObrig1
             // 
@@ -130,16 +134,17 @@
             this.btnFechar.Location = new System.Drawing.Point(236, 271);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(75, 23);
-            this.btnFechar.TabIndex = 16;
+            this.btnFechar.TabIndex = 5;
             this.btnFechar.Text = "Fechar";
             this.btnFechar.UseVisualStyleBackColor = true;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // btnCadastrarCurso
             // 
             this.btnCadastrarCurso.Location = new System.Drawing.Point(103, 271);
             this.btnCadastrarCurso.Name = "btnCadastrarCurso";
             this.btnCadastrarCurso.Size = new System.Drawing.Size(75, 23);
-            this.btnCadastrarCurso.TabIndex = 15;
+            this.btnCadastrarCurso.TabIndex = 4;
             this.btnCadastrarCurso.Text = "Cadastrar";
             this.btnCadastrarCurso.UseVisualStyleBackColor = true;
             this.btnCadastrarCurso.Click += new System.EventHandler(this.btnCadastrarCurso_Click);
@@ -147,9 +152,10 @@
             // lblInstrucoes
             // 
             this.lblInstrucoes.AutoSize = true;
+            this.lblInstrucoes.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblInstrucoes.Location = new System.Drawing.Point(85, 66);
             this.lblInstrucoes.Name = "lblInstrucoes";
-            this.lblInstrucoes.Size = new System.Drawing.Size(157, 15);
+            this.lblInstrucoes.Size = new System.Drawing.Size(161, 15);
             this.lblInstrucoes.TabIndex = 17;
             this.lblInstrucoes.Text = "Preencha os campos abaixo:";
             // 
@@ -157,6 +163,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackgroundImage = global::LetsMusicTP1.Presentation.Properties.Resources.fundo;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(414, 361);
             this.Controls.Add(this.lblInstrucoes);
             this.Controls.Add(this.btnFechar);
@@ -170,7 +179,12 @@
             this.Controls.Add(this.lblVagas);
             this.Controls.Add(this.lblCargaHoraria);
             this.Controls.Add(this.lblNome);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmCadastroCurso";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Curso";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -39,7 +39,7 @@
             this.btnFechar.Location = new System.Drawing.Point(166, 208);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(66, 23);
-            this.btnFechar.TabIndex = 0;
+            this.btnFechar.TabIndex = 1;
             this.btnFechar.Text = "Fechar";
             this.btnFechar.UseVisualStyleBackColor = true;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
@@ -85,6 +85,7 @@
             this.Controls.Add(this.lblSobre);
             this.Controls.Add(this.lblTituloSobre);
             this.Controls.Add(this.btnFechar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmSobre";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sobre";

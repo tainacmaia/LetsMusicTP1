@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPesquisaTurma));
             this.dtgTurma = new System.Windows.Forms.DataGridView();
             this.btnAlterarTurma = new System.Windows.Forms.Button();
             this.txtPesquisaTurma = new System.Windows.Forms.TextBox();
@@ -93,12 +94,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackgroundImage = global::LetsMusicTP1.Presentation.Properties.Resources.fundo;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(534, 361);
             this.Controls.Add(this.lblStatusBusca);
             this.Controls.Add(this.lblTituloPesqTurma);
             this.Controls.Add(this.txtPesquisaTurma);
             this.Controls.Add(this.btnAlterarTurma);
             this.Controls.Add(this.dtgTurma);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmPesquisaTurma";

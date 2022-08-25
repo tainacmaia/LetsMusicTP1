@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCadastroTurma));
             this.btnAdicionaAluno = new System.Windows.Forms.Button();
             this.lblCurso = new System.Windows.Forms.Label();
             this.cbbCurso = new System.Windows.Forms.ComboBox();
@@ -49,7 +50,7 @@
             this.btnAdicionaAluno.Location = new System.Drawing.Point(328, 197);
             this.btnAdicionaAluno.Name = "btnAdicionaAluno";
             this.btnAdicionaAluno.Size = new System.Drawing.Size(30, 23);
-            this.btnAdicionaAluno.TabIndex = 2;
+            this.btnAdicionaAluno.TabIndex = 3;
             this.btnAdicionaAluno.Text = ">";
             this.btnAdicionaAluno.UseVisualStyleBackColor = true;
             this.btnAdicionaAluno.Click += new System.EventHandler(this.btnAdicionaAluno_Click);
@@ -57,9 +58,10 @@
             // lblCurso
             // 
             this.lblCurso.AutoSize = true;
+            this.lblCurso.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblCurso.Location = new System.Drawing.Point(185, 58);
             this.lblCurso.Name = "lblCurso";
-            this.lblCurso.Size = new System.Drawing.Size(104, 15);
+            this.lblCurso.Size = new System.Drawing.Size(108, 15);
             this.lblCurso.TabIndex = 0;
             this.lblCurso.Text = "Selecione o Curso:";
             // 
@@ -69,7 +71,7 @@
             this.cbbCurso.Location = new System.Drawing.Point(294, 55);
             this.cbbCurso.Name = "cbbCurso";
             this.cbbCurso.Size = new System.Drawing.Size(228, 23);
-            this.cbbCurso.TabIndex = 4;
+            this.cbbCurso.TabIndex = 1;
             this.cbbCurso.SelectedIndexChanged += new System.EventHandler(this.cbbCurso_SelectedIndexChanged);
             // 
             // btnCadastrarTurma
@@ -77,7 +79,7 @@
             this.btnCadastrarTurma.Location = new System.Drawing.Point(200, 365);
             this.btnCadastrarTurma.Name = "btnCadastrarTurma";
             this.btnCadastrarTurma.Size = new System.Drawing.Size(75, 23);
-            this.btnCadastrarTurma.TabIndex = 6;
+            this.btnCadastrarTurma.TabIndex = 5;
             this.btnCadastrarTurma.Text = "Cadastrar";
             this.btnCadastrarTurma.UseVisualStyleBackColor = true;
             this.btnCadastrarTurma.Click += new System.EventHandler(this.btnCadastrarTurma_Click);
@@ -97,7 +99,7 @@
             this.btnFechar.Location = new System.Drawing.Point(400, 365);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(75, 23);
-            this.btnFechar.TabIndex = 17;
+            this.btnFechar.TabIndex = 6;
             this.btnFechar.Text = "Fechar";
             this.btnFechar.UseVisualStyleBackColor = true;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
@@ -108,43 +110,46 @@
             this.txtPesquisaAluno.Name = "txtPesquisaAluno";
             this.txtPesquisaAluno.PlaceholderText = "Digite dado para busca...";
             this.txtPesquisaAluno.Size = new System.Drawing.Size(282, 23);
-            this.txtPesquisaAluno.TabIndex = 19;
+            this.txtPesquisaAluno.TabIndex = 2;
             this.txtPesquisaAluno.TextChanged += new System.EventHandler(this.txtPesquisaAluno_TextChanged);
             // 
             // lblVagasCurso
             // 
             this.lblVagasCurso.AutoSize = true;
-            this.lblVagasCurso.Location = new System.Drawing.Point(458, 126);
+            this.lblVagasCurso.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblVagasCurso.Location = new System.Drawing.Point(463, 126);
             this.lblVagasCurso.Name = "lblVagasCurso";
-            this.lblVagasCurso.Size = new System.Drawing.Size(14, 15);
+            this.lblVagasCurso.Size = new System.Drawing.Size(0, 15);
             this.lblVagasCurso.TabIndex = 22;
-            this.lblVagasCurso.Text = "X";
             this.lblVagasCurso.Click += new System.EventHandler(this.lblVagasCurso_Click);
             // 
             // lblAlunosCad
             // 
             this.lblAlunosCad.AutoSize = true;
+            this.lblAlunosCad.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblAlunosCad.Location = new System.Drawing.Point(30, 100);
             this.lblAlunosCad.Name = "lblAlunosCad";
-            this.lblAlunosCad.Size = new System.Drawing.Size(115, 15);
+            this.lblAlunosCad.Size = new System.Drawing.Size(116, 15);
             this.lblAlunosCad.TabIndex = 23;
             this.lblAlunosCad.Text = "Alunos Cadastrados:";
             // 
             // lblAlunosMatr
             // 
             this.lblAlunosMatr.AutoSize = true;
+            this.lblAlunosMatr.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblAlunosMatr.Location = new System.Drawing.Point(374, 110);
             this.lblAlunosMatr.Name = "lblAlunosMatr";
-            this.lblAlunosMatr.Size = new System.Drawing.Size(170, 15);
+            this.lblAlunosMatr.Size = new System.Drawing.Size(172, 15);
             this.lblAlunosMatr.TabIndex = 24;
             this.lblAlunosMatr.Text = "Alunos Matriculados no Curso:";
             // 
             // lblTotVagas
             // 
             this.lblTotVagas.AutoSize = true;
+            this.lblTotVagas.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblTotVagas.Location = new System.Drawing.Point(374, 126);
             this.lblTotVagas.Name = "lblTotVagas";
-            this.lblTotVagas.Size = new System.Drawing.Size(87, 15);
+            this.lblTotVagas.Size = new System.Drawing.Size(91, 15);
             this.lblTotVagas.TabIndex = 21;
             this.lblTotVagas.Text = "Total de Vagas: ";
             // 
@@ -153,7 +158,7 @@
             this.btnRemoveAluno.Location = new System.Drawing.Point(328, 241);
             this.btnRemoveAluno.Name = "btnRemoveAluno";
             this.btnRemoveAluno.Size = new System.Drawing.Size(30, 23);
-            this.btnRemoveAluno.TabIndex = 25;
+            this.btnRemoveAluno.TabIndex = 4;
             this.btnRemoveAluno.Text = "<";
             this.btnRemoveAluno.UseVisualStyleBackColor = true;
             this.btnRemoveAluno.Click += new System.EventHandler(this.btnRemoveAluno_Click);
@@ -181,6 +186,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackgroundImage = global::LetsMusicTP1.Presentation.Properties.Resources.fundo;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(684, 411);
             this.Controls.Add(this.ltbAlunosMat);
             this.Controls.Add(this.ltbAlunosCad);
@@ -196,6 +203,8 @@
             this.Controls.Add(this.cbbCurso);
             this.Controls.Add(this.btnAdicionaAluno);
             this.Controls.Add(this.lblCurso);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmCadastroTurma";

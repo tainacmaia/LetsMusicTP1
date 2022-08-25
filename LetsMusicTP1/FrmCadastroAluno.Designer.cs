@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastroAluno));
             this.btnCadastrarAluno = new System.Windows.Forms.Button();
             this.btnFechar = new System.Windows.Forms.Button();
             this.lblNome = new System.Windows.Forms.Label();
@@ -48,7 +49,7 @@
             this.btnCadastrarAluno.Location = new System.Drawing.Point(109, 308);
             this.btnCadastrarAluno.Name = "btnCadastrarAluno";
             this.btnCadastrarAluno.Size = new System.Drawing.Size(75, 23);
-            this.btnCadastrarAluno.TabIndex = 0;
+            this.btnCadastrarAluno.TabIndex = 5;
             this.btnCadastrarAluno.Text = "Cadastrar";
             this.btnCadastrarAluno.UseVisualStyleBackColor = true;
             this.btnCadastrarAluno.Click += new System.EventHandler(this.btnCadastrar_Click);
@@ -58,7 +59,7 @@
             this.btnFechar.Location = new System.Drawing.Point(242, 308);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(75, 23);
-            this.btnFechar.TabIndex = 1;
+            this.btnFechar.TabIndex = 6;
             this.btnFechar.Text = "Fechar";
             this.btnFechar.UseVisualStyleBackColor = true;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
@@ -66,15 +67,17 @@
             // lblNome
             // 
             this.lblNome.AutoSize = true;
+            this.lblNome.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblNome.Location = new System.Drawing.Point(79, 93);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(48, 15);
+            this.lblNome.Size = new System.Drawing.Size(49, 15);
             this.lblNome.TabIndex = 2;
             this.lblNome.Text = "Nome:*";
             // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblEmail.Location = new System.Drawing.Point(79, 138);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(49, 15);
@@ -84,18 +87,20 @@
             // lblTelefone
             // 
             this.lblTelefone.AutoSize = true;
+            this.lblTelefone.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblTelefone.Location = new System.Drawing.Point(79, 185);
             this.lblTelefone.Name = "lblTelefone";
-            this.lblTelefone.Size = new System.Drawing.Size(59, 15);
+            this.lblTelefone.Size = new System.Drawing.Size(64, 15);
             this.lblTelefone.TabIndex = 4;
             this.lblTelefone.Text = "Telefone:*";
             // 
             // lblCpf
             // 
             this.lblCpf.AutoSize = true;
+            this.lblCpf.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblCpf.Location = new System.Drawing.Point(79, 231);
             this.lblCpf.Name = "lblCpf";
-            this.lblCpf.Size = new System.Drawing.Size(36, 15);
+            this.lblCpf.Size = new System.Drawing.Size(35, 15);
             this.lblCpf.TabIndex = 5;
             this.lblCpf.Text = "CPF:*";
             // 
@@ -104,14 +109,14 @@
             this.txbNome.Location = new System.Drawing.Point(142, 90);
             this.txbNome.Name = "txbNome";
             this.txbNome.Size = new System.Drawing.Size(205, 23);
-            this.txbNome.TabIndex = 6;
+            this.txbNome.TabIndex = 1;
             // 
             // txbEmail
             // 
             this.txbEmail.Location = new System.Drawing.Point(142, 137);
             this.txbEmail.Name = "txbEmail";
             this.txbEmail.Size = new System.Drawing.Size(205, 23);
-            this.txbEmail.TabIndex = 7;
+            this.txbEmail.TabIndex = 2;
             // 
             // mskTelefone
             // 
@@ -119,7 +124,7 @@
             this.mskTelefone.Mask = "(00)00000-0000";
             this.mskTelefone.Name = "mskTelefone";
             this.mskTelefone.Size = new System.Drawing.Size(129, 23);
-            this.mskTelefone.TabIndex = 8;
+            this.mskTelefone.TabIndex = 3;
             this.mskTelefone.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePromptAndLiterals;
             // 
             // mskCpf
@@ -129,14 +134,14 @@
             this.mskCpf.Mask = "000.000.000-00";
             this.mskCpf.Name = "mskCpf";
             this.mskCpf.Size = new System.Drawing.Size(129, 23);
-            this.mskCpf.TabIndex = 9;
+            this.mskCpf.TabIndex = 4;
             this.mskCpf.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePromptAndLiterals;
             // 
             // lblTituloCadAluno
             // 
             this.lblTituloCadAluno.AutoSize = true;
             this.lblTituloCadAluno.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblTituloCadAluno.Location = new System.Drawing.Point(140, 25);
+            this.lblTituloCadAluno.Location = new System.Drawing.Point(146, 25);
             this.lblTituloCadAluno.Name = "lblTituloCadAluno";
             this.lblTituloCadAluno.Size = new System.Drawing.Size(122, 17);
             this.lblTituloCadAluno.TabIndex = 10;
@@ -155,9 +160,10 @@
             // lblInstrucoes
             // 
             this.lblInstrucoes.AutoSize = true;
+            this.lblInstrucoes.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblInstrucoes.Location = new System.Drawing.Point(79, 62);
             this.lblInstrucoes.Name = "lblInstrucoes";
-            this.lblInstrucoes.Size = new System.Drawing.Size(157, 15);
+            this.lblInstrucoes.Size = new System.Drawing.Size(161, 15);
             this.lblInstrucoes.TabIndex = 12;
             this.lblInstrucoes.Text = "Preencha os campos abaixo:";
             // 
@@ -165,6 +171,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::LetsMusicTP1.Presentation.Properties.Resources.fundo;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(414, 361);
             this.Controls.Add(this.lblInstrucoes);
             this.Controls.Add(this.lblCampoObrig1);
@@ -179,6 +187,10 @@
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.btnFechar);
             this.Controls.Add(this.btnCadastrarAluno);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmCadastroAluno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Aluno";

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPesquisaCurso));
             this.dtgCursos = new System.Windows.Forms.DataGridView();
             this.btnRemoverCurso = new System.Windows.Forms.Button();
             this.btnAlterarCurso = new System.Windows.Forms.Button();
@@ -62,7 +63,7 @@
             this.btnRemoverCurso.Location = new System.Drawing.Point(319, 309);
             this.btnRemoverCurso.Name = "btnRemoverCurso";
             this.btnRemoverCurso.Size = new System.Drawing.Size(75, 23);
-            this.btnRemoverCurso.TabIndex = 3;
+            this.btnRemoverCurso.TabIndex = 5;
             this.btnRemoverCurso.Text = "Remover";
             this.btnRemoverCurso.UseVisualStyleBackColor = true;
             this.btnRemoverCurso.Click += new System.EventHandler(this.btnRemoverCurso_Click);
@@ -72,7 +73,7 @@
             this.btnAlterarCurso.Location = new System.Drawing.Point(160, 309);
             this.btnAlterarCurso.Name = "btnAlterarCurso";
             this.btnAlterarCurso.Size = new System.Drawing.Size(75, 23);
-            this.btnAlterarCurso.TabIndex = 2;
+            this.btnAlterarCurso.TabIndex = 4;
             this.btnAlterarCurso.Text = "Alterar";
             this.btnAlterarCurso.UseVisualStyleBackColor = true;
             this.btnAlterarCurso.Click += new System.EventHandler(this.btnAlterarCurso_Click);
@@ -99,6 +100,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(41, 269);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 15);
@@ -118,23 +120,25 @@
             this.textBox2.Location = new System.Drawing.Point(232, 266);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 23);
-            this.textBox2.TabIndex = 15;
+            this.textBox2.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(202, 269);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(24, 15);
+            this.label2.Size = new System.Drawing.Size(23, 15);
             this.label2.TabIndex = 16;
             this.label2.Text = "CH";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.Location = new System.Drawing.Point(348, 269);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 15);
+            this.label3.Size = new System.Drawing.Size(38, 15);
             this.label3.TabIndex = 17;
             this.label3.Text = "Vagas";
             // 
@@ -143,7 +147,7 @@
             this.textBox3.Location = new System.Drawing.Point(391, 266);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 23);
-            this.textBox3.TabIndex = 18;
+            this.textBox3.TabIndex = 3;
             // 
             // lblStatusBusca
             // 
@@ -157,6 +161,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::LetsMusicTP1.Presentation.Properties.Resources.fundo;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(534, 361);
             this.Controls.Add(this.lblStatusBusca);
             this.Controls.Add(this.textBox3);
@@ -170,6 +176,10 @@
             this.Controls.Add(this.btnRemoverCurso);
             this.Controls.Add(this.btnAlterarCurso);
             this.Controls.Add(this.dtgCursos);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmPesquisaCurso";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pesquisa Curso";

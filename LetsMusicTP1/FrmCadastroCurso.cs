@@ -11,8 +11,8 @@ namespace LetsMusicTP1
 
         private void btnCadastrarCurso_Click(object sender, EventArgs e)
         {
-            List<string> dadosCurso = new() { txtNomeCurso.Text, mskCarga.Text, mskVagas.Text };
-            if (txtNomeCurso.Text == string.Empty)
+            List<string> dadosCurso = new() { txtNomeCurso.Text.Trim(), mskCarga.Text.Trim(), mskVagas.Text.Trim() };
+            if (txtNomeCurso.Text == string.Empty || mskCarga.Text == string.Empty || mskVagas.Text == string.Empty || int.Parse(mskVagas.Text) <= 0)
             {
                 MessageBox.Show("Preencha todos os campos obrigatórios!");
             }
@@ -21,6 +21,11 @@ namespace LetsMusicTP1
                 string msg = ServicesCurso.CadastrarCurso(dadosCurso);
                 MessageBox.Show(msg);
             }
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

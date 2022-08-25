@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPesquisaAluno));
             this.txtValorPesquisa = new System.Windows.Forms.TextBox();
             this.dtgAlunos = new System.Windows.Forms.DataGridView();
             this.btnRemoverAluno = new System.Windows.Forms.Button();
@@ -75,7 +76,7 @@
             this.btnRemoverAluno.Location = new System.Drawing.Point(416, 467);
             this.btnRemoverAluno.Name = "btnRemoverAluno";
             this.btnRemoverAluno.Size = new System.Drawing.Size(75, 23);
-            this.btnRemoverAluno.TabIndex = 3;
+            this.btnRemoverAluno.TabIndex = 6;
             this.btnRemoverAluno.Text = "Remover";
             this.btnRemoverAluno.UseVisualStyleBackColor = true;
             this.btnRemoverAluno.Click += new System.EventHandler(this.btnRemoverAluno_Click);
@@ -85,7 +86,7 @@
             this.btnAlterarAluno.Location = new System.Drawing.Point(201, 467);
             this.btnAlterarAluno.Name = "btnAlterarAluno";
             this.btnAlterarAluno.Size = new System.Drawing.Size(75, 23);
-            this.btnAlterarAluno.TabIndex = 2;
+            this.btnAlterarAluno.TabIndex = 5;
             this.btnAlterarAluno.Text = "Alterar";
             this.btnAlterarAluno.UseVisualStyleBackColor = true;
             this.btnAlterarAluno.Click += new System.EventHandler(this.btnAlterarAluno_Click);
@@ -103,38 +104,46 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(53, 343);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(28, 15);
+            this.label1.Size = new System.Drawing.Size(27, 15);
             this.label1.TabIndex = 12;
             this.label1.Text = "CPF";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(308, 346);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 15);
+            this.label2.Size = new System.Drawing.Size(41, 15);
             this.label2.TabIndex = 13;
             this.label2.Text = "Nome";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.Location = new System.Drawing.Point(53, 395);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 15);
+            this.label3.Size = new System.Drawing.Size(56, 15);
             this.label3.TabIndex = 14;
             this.label3.Text = "Telefone";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.Location = new System.Drawing.Point(307, 395);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 15);
             this.label4.TabIndex = 15;
             this.label4.Text = "E-mail";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // textBox1
             // 
@@ -149,21 +158,21 @@
             this.textBox2.Location = new System.Drawing.Point(365, 343);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(285, 23);
-            this.textBox2.TabIndex = 17;
+            this.textBox2.TabIndex = 2;
             // 
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(129, 392);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(132, 23);
-            this.textBox3.TabIndex = 18;
+            this.textBox3.TabIndex = 3;
             // 
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(365, 392);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(285, 23);
-            this.textBox4.TabIndex = 19;
+            this.textBox4.TabIndex = 4;
             // 
             // lblStatusBusca
             // 
@@ -178,6 +187,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackgroundImage = global::LetsMusicTP1.Presentation.Properties.Resources.fundo;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(684, 502);
             this.Controls.Add(this.lblStatusBusca);
             this.Controls.Add(this.textBox4);
@@ -193,6 +204,9 @@
             this.Controls.Add(this.btnAlterarAluno);
             this.Controls.Add(this.dtgAlunos);
             this.Controls.Add(this.txtValorPesquisa);
+            this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmPesquisaAluno";

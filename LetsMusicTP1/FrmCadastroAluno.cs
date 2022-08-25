@@ -16,7 +16,7 @@ namespace LetsMusicTP1
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            List<string> dadosAluno = new() { txbEmail.Text, txbNome.Text, mskTelefone.Text, mskCpf.Text };
+            List<string> dadosAluno = new() { txbEmail.Text.Trim(), txbNome.Text.Trim(), mskTelefone.Text, mskCpf.Text };
             if (dadosAluno.Any(x => x == string.Empty) || mskCpf.Text.Contains('_') || mskTelefone.Text.Contains('_'))
             {
                 MessageBox.Show("Preencha todos os campos obrigatórios!");

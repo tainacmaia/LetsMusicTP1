@@ -69,5 +69,9 @@ namespace LetsMusicTP1.Repositories
         {
             return listaAlunos;
         }
+        public static void RemoveAlunoPorCpf(string cpf)
+        {
+            listaAlunos.RemoveAll(x => x.Cpf == cpf);
+        }
     }
 }

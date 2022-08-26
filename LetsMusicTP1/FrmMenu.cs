@@ -10,12 +10,6 @@ namespace LetsMusicTP1
             RepositorioTurma.IniciaLista();
             InitializeComponent();
         }
-
-        private void cadastroToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var result = MessageBox.Show("Deseja mesmo sair?", "Aviso", MessageBoxButtons.OKCancel);
@@ -65,11 +59,6 @@ namespace LetsMusicTP1
         {
             var form = new FrmPesquisaTurma();
             form.ShowDialog();
-        }
-
-        private void frmMenuLetsMusic_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -55,7 +55,6 @@
             this.dtgCursos.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dtgCursos.Size = new System.Drawing.Size(456, 153);
             this.dtgCursos.TabIndex = 0;
-            this.dtgCursos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgCursos_CellContentClick);
             this.dtgCursos.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dtgCursos_RowHeaderMouseClick);
             // 
             // btnRemoverCurso

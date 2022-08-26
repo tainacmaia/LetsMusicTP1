@@ -20,6 +20,9 @@ namespace LetsMusicTP1
             {
                 string msg = ServicesCurso.CadastrarCurso(dadosCurso);
                 MessageBox.Show(msg);
+                txtNomeCurso.Clear();
+                mskCarga.Clear();
+                mskVagas.Clear();
             }
         }
 

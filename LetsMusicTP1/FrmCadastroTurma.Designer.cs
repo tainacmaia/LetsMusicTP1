@@ -122,7 +122,6 @@
             this.lblVagasCurso.Size = new System.Drawing.Size(14, 15);
             this.lblVagasCurso.TabIndex = 22;
             this.lblVagasCurso.Text = "0";
-            this.lblVagasCurso.Click += new System.EventHandler(this.lblVagasCurso_Click);
             // 
             // lblAlunosCad
             // 

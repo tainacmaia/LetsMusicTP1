@@ -50,7 +50,6 @@
             this.dtgTurma.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgTurma.Size = new System.Drawing.Size(469, 185);
             this.dtgTurma.TabIndex = 0;
-            this.dtgTurma.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // btnAlterarTurma
             // 

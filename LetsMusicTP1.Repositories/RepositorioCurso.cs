@@ -39,6 +39,19 @@ namespace LetsMusicTP1.Repositories
         {
             return listaCurso.Find(x => x.Nome == curso).Vagas;
         }
+        public static List<Curso> ListaTodosCursos()
+        {
+            return listaCurso;
+        }
+        public static void AtualizaCurso(Curso curso, string novaCarga, string novasVagas)
+        {
+            curso.CargaHoraria = novaCarga;
+            curso.Vagas = novasVagas;
+        }
+        public static void RemoveCurso(string nomeCurso)
+        {
+            listaCurso.RemoveAll(x => x.Nome == nomeCurso);
+        }
     }
 
 }

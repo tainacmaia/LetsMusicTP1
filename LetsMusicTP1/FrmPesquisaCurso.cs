@@ -1,14 +1,5 @@
-﻿using LetsMusicTP1.Repositories;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using LetsMusicTP1.Domain;
+﻿using LetsMusicTP1.Domain;
+using LetsMusicTP1.Services;
 
 namespace LetsMusicTP1.Presentation
 {
@@ -21,25 +12,28 @@ namespace LetsMusicTP1.Presentation
 
         private void FrmPesquisaCurso_Load(object sender, EventArgs e)
         {
+            InicializaGrid();
+        }
+        private void InicializaGrid()
+        {
+            var listaGeral = ServicesCurso.BuscaoTodosCursos();
+            AtualizaDataGrid(listaGeral);
+        }
+        private void AtualizaDataGrid(List<Curso> listaCursos)
+        {
             var source = new BindingSource();
-            source.DataSource = RepositorioCurso.listaCurso;
+            source.DataSource = listaCursos;
             dtgCursos.DataSource = source;
         }
 
         private async void txtPesquisaCurso_TextChanged(object sender, EventArgs e)
         {
             string textoDigitado = txtPesquisaCurso.Text;
-            var source = new BindingSource();
             lblStatusBusca.Text = "Buscando...Por favor aguarde";
             await Task.Delay(2000);
+            var listaFiltrada = ServicesCurso.BuscaCursoGeral(textoDigitado);
+            AtualizaDataGrid(listaFiltrada);
             lblStatusBusca.Text = "";
-            source.DataSource = RepositorioCurso.BuscaCurso(textoDigitado);
-            dtgCursos.DataSource = source;
-        }
-
-        private void dtgCursos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
         private void dtgCursos_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -53,27 +47,32 @@ namespace LetsMusicTP1.Presentation
         {
             if (dtgCursos.SelectedRows.Count > 0)
             {
-                var atualizaCurso = RepositorioCurso.listaCurso.Find(x => x.Nome == textBox1.Text);
+                var atualizaCurso = ServicesCurso.PesquisaCursoPorNome(textBox1.Text);
                 if (atualizaCurso.CargaHoraria != textBox2.Text || atualizaCurso.Vagas != textBox3.Text)
                 {
                     var result = MessageBox.Show("Deseja mesmo alterar informações do curso?", "Aviso", MessageBoxButtons.OKCancel);
                     if (result == DialogResult.Cancel)
                     {
-                        textBox1.Clear();
-                        textBox2.Clear();
-                        textBox3.Clear();
+                        LimpaCamposAlteracao();
                         return;
                     }
-                    atualizaCurso.CargaHoraria = textBox2.Text;
-                    atualizaCurso.Vagas = textBox3.Text;
+                    bool cursoAtualizado = ServicesCurso.AtualizaCurso(atualizaCurso, textBox2.Text, textBox3.Text);
+                    if (!cursoAtualizado)
+                    {
+                        MessageBox.Show("Já existem mais alunos cadastrados nesse curso que o valor de vagas alterado.");
+                    }
                 }
-                textBox1.Clear();
-                textBox2.Clear();
-                textBox3.Clear();
-                var bindingList = new BindingList<Curso>(RepositorioCurso.listaCurso);
-                var source = new BindingSource(bindingList, null);
-                dtgCursos.DataSource = source;
+                LimpaCamposAlteracao();
+                InicializaGrid();
             }
+        }
+
+        private void LimpaCamposAlteracao()
+        {
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox3.Clear();
+            txtPesquisaCurso.Clear();
         }
 
         private void btnRemoverCurso_Click(object sender, EventArgs e)
@@ -81,19 +80,13 @@ namespace LetsMusicTP1.Presentation
             var result = MessageBox.Show("Deseja mesmo remover esse curso?", "Aviso", MessageBoxButtons.OKCancel);
             if (result == DialogResult.Cancel)
             {
-                textBox1.Clear();
-                textBox2.Clear();
-                textBox3.Clear();
+                LimpaCamposAlteracao();
                 return;
             }
-            RepositorioCurso.listaCurso.RemoveAll(x => x.Nome == textBox1.Text);
-            RepositorioTurma.listaTurma.RemoveAll(x => x.NomeCurso == textBox1.Text);
-            textBox1.Clear();
-            textBox2.Clear();
-            textBox3.Clear();
-            var bindingList = new BindingList<Curso>(RepositorioCurso.listaCurso);
-            var source = new BindingSource(bindingList, null);
-            dtgCursos.DataSource = source;
+            ServicesCurso.RemoveCurso(textBox1.Text);
+
+            LimpaCamposAlteracao();
+            InicializaGrid();
         }
     }
 }

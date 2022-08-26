@@ -43,6 +43,7 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.lblStatusBusca = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgAlunos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,7 +69,6 @@
             this.dtgAlunos.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dtgAlunos.Size = new System.Drawing.Size(615, 213);
             this.dtgAlunos.TabIndex = 0;
-            this.dtgAlunos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dtgAlunos.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dtgAlunos_RowHeaderMouseClick);
             // 
             // btnRemoverAluno
@@ -110,7 +110,6 @@
             this.label1.Size = new System.Drawing.Size(27, 15);
             this.label1.TabIndex = 12;
             this.label1.Text = "CPF";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -121,7 +120,6 @@
             this.label2.Size = new System.Drawing.Size(41, 15);
             this.label2.TabIndex = 13;
             this.label2.Text = "Nome";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -132,7 +130,6 @@
             this.label3.Size = new System.Drawing.Size(56, 15);
             this.label3.TabIndex = 14;
             this.label3.Text = "Telefone";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -143,7 +140,6 @@
             this.label4.Size = new System.Drawing.Size(41, 15);
             this.label4.TabIndex = 15;
             this.label4.Text = "E-mail";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // textBox1
             // 
@@ -182,6 +178,14 @@
             this.lblStatusBusca.Size = new System.Drawing.Size(0, 15);
             this.lblStatusBusca.TabIndex = 20;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(283, 58);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(0, 15);
+            this.label5.TabIndex = 22;
+            // 
             // FrmPesquisaAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -190,6 +194,7 @@
             this.BackgroundImage = global::LetsMusicTP1.Presentation.Properties.Resources.fundo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(684, 502);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.lblStatusBusca);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
@@ -235,5 +240,6 @@
         private TextBox textBox3;
         private TextBox textBox4;
         private Label lblStatusBusca;
+        private Label label5;
     }
 }

@@ -1,6 +1,5 @@
 ﻿using LetsMusicTP1.Domain;
-using LetsMusicTP1.Repositories;
-using System.ComponentModel;
+using LetsMusicTP1.Services;
 
 namespace LetsMusicTP1.Presentation
 {
@@ -11,37 +10,37 @@ namespace LetsMusicTP1.Presentation
             InitializeComponent();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void InicializaGrid()
         {
-
+            var listaGeral = ServicesTurma.BuscarTodasTurmas();
+            AtualizaDataGrid(listaGeral);
         }
-
-        private void FrmPesquisaTurma_Load(object sender, EventArgs e)
+        private void AtualizaDataGrid(List<Turma> listaTurmas)
         {
             var source = new BindingSource();
-            source.DataSource = RepositorioTurma.listaTurma;
+            source.DataSource = listaTurmas;
             dtgTurma.DataSource = source;
+        }
+        private void FrmPesquisaTurma_Load(object sender, EventArgs e)
+        {
+            InicializaGrid();
         }
 
         private async void txtPesquisaTurma_TextChanged(object sender, EventArgs e)
         {
             string textoDigitado = txtPesquisaTurma.Text;
-            var source = new BindingSource();
             lblStatusBusca.Text = "Buscando...Por favor aguarde";
             await Task.Delay(2000);
+            var listaFiltrada = ServicesTurma.BuscaTurmaGeral(textoDigitado);
+            AtualizaDataGrid(listaFiltrada);
             lblStatusBusca.Text = "";
-            source.DataSource = RepositorioTurma.BuscaTurma(textoDigitado);
-            dtgTurma.DataSource = source;
         }
 
         private void btnAlterarTurma_Click(object sender, EventArgs e)
         {
             var formCadastro = new FrmAlterarTurma();
             formCadastro.ShowDialog();
-
-            var bindingList = new BindingList<Turma>(RepositorioTurma.listaTurma);
-            var source = new BindingSource(bindingList, null);
-            dtgTurma.DataSource = source;
+            InicializaGrid();
         }
     }
 }

@@ -25,12 +25,11 @@ namespace LetsMusicTP1
             {
                 string msg = ServicesAluno.CadastrarAluno(dadosAluno);
                 MessageBox.Show(msg);
+                txbNome.Clear();
+                txbEmail.Clear();
+                mskCpf.Clear();
+                mskTelefone.Clear();
             }
-        }
-
-        private void frmCadastroAluno_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

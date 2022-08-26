@@ -28,5 +28,23 @@ namespace LetsMusicTP1.Services
         {
             return RepositorioAluno.BuscaAlunosPorNome(textoDigitado);
         }
+        public static Aluno PesuisaAlunoPorCpf(string cpf)
+        {
+            return RepositorioAluno.BuscarAlunoPorCpf(cpf);
+        }
+        public static List<Aluno> BuscaTodosAlunos()
+        {
+            return RepositorioAluno.ListaTodosAlunos();
+        }
+        public static List<Aluno> BuscaAlunoPorCamposGerais(string textoPesquisa)
+        {
+            return RepositorioAluno.BuscaAluno(textoPesquisa);
+        }
+        public static void RemoveAluno(string cpf, string nome)
+        {
+            RepositorioAluno.RemoveAlunoPorCpf(cpf);
+            RepositorioTurma.RemoveAlunoTurma(nome);
+        }
+
     }
 }

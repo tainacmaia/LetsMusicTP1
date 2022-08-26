@@ -27,6 +27,10 @@ namespace LetsMusicTP1.Repositories
                 listaTurma.Add(turma);
             }
         }
+        public static List<Turma> ListaTodasTurmas()
+        {
+            return listaTurma;
+        }
 
         public static void RegistrarTurma(Turma novaTurma)
         {
@@ -53,6 +57,10 @@ namespace LetsMusicTP1.Repositories
         public static void RemoveTurmasCurso(string curso)
         {
             listaTurma.RemoveAll(x => x.NomeCurso == curso);
+        }
+        public static void RemoveAlunoTurma(string nomeAluno)
+        {
+            listaTurma.RemoveAll(x => x.NomeAluno == nomeAluno);
         }
     }
 }

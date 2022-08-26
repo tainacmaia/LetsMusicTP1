@@ -1,12 +1,12 @@
 ﻿using LetsMusicTP1.Domain;
-using LetsMusicTP1.Repositories;
+using LetsMusicTP1.Services;
 using System.Data;
 
 namespace LetsMusicTP1
 {
     public partial class FrmCadastroTurma : Form
     {
-        List<string> alunosCad = RepositorioAluno.listaAlunos.Select(x => x.Nome).ToList();
+        List<string> alunosCad = ServicesAluno.BuscaTodosAlunos().Select(x => x.Nome).ToList();
         public FrmCadastroTurma()
         {
             InitializeComponent();
@@ -14,7 +14,7 @@ namespace LetsMusicTP1
 
         private void FrmCadastroTurma_Load(object sender, EventArgs e)
         {
-            List<string> cursos = RepositorioCurso.listaCurso.Select(x => x.Nome).ToList();
+            List<string> cursos = ServicesCurso.BuscaoTodosCursos().Select(x => x.Nome).ToList();
             foreach (var curso in cursos)
             {
                 cbbCurso.Items.Add(curso);
@@ -64,7 +64,7 @@ namespace LetsMusicTP1
                 MessageBox.Show("Preencha todos os campos obrigatórios!");
                 return;
             }
-            if (RepositorioTurma.BuscaTurmaPorCurso(cbbCurso.SelectedItem.ToString()).Any())
+            if (ServicesTurma.ListaTurmasCurso(cbbCurso.SelectedItem.ToString()).Any())
             {
                 MessageBox.Show("Curso já possui turma cadastrada!");
                 return;
@@ -72,7 +72,7 @@ namespace LetsMusicTP1
             foreach (var aluno in ltbAlunosMat.Items)
             {
                 Turma turma = new Turma() { NomeAluno = aluno.ToString(), NomeCurso = cbbCurso.SelectedItem.ToString() };
-                RepositorioTurma.listaTurma.Add(turma);
+                ServicesTurma.CadastrarTurma(turma);
             }
             MessageBox.Show("Turma cadastrada com sucesso!");
             cbbCurso.ResetText();
@@ -83,12 +83,7 @@ namespace LetsMusicTP1
 
         private void cbbCurso_SelectedIndexChanged(object sender, EventArgs e)
         {
-            lblVagasCurso.Text = RepositorioCurso.listaCurso.Find(x => x.Nome == cbbCurso.SelectedItem.ToString()).Vagas;
-        }
-
-        private void lblVagasCurso_Click(object sender, EventArgs e)
-        {
-
+            lblVagasCurso.Text = ServicesCurso.PesquisaVagasCurso(cbbCurso.SelectedItem.ToString());
         }
     }
 }

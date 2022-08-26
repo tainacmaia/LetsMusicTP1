@@ -5,6 +5,10 @@ namespace LetsMusicTP1.Services
 {
     public class ServicesTurma
     {
+        public static List<Turma> BuscarTodasTurmas()
+        {
+            return RepositorioTurma.ListaTodasTurmas();
+        }
         public static List<string> ListaCursosTurma()
         {
             return RepositorioTurma.ListaCursosComTurma();
@@ -20,6 +24,10 @@ namespace LetsMusicTP1.Services
         public static List<Turma> ListaTurmasCurso(string curso)
         {
             return RepositorioTurma.BuscaTurmaPorCurso(curso);
+        }
+        public static List<Turma> BuscaTurmaGeral(string textoPesquisa)
+        {
+            return RepositorioTurma.BuscaTurma(textoPesquisa);
         }
     }
 }

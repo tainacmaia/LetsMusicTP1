@@ -27,5 +27,33 @@ namespace LetsMusicTP1.Services
         {
             return RepositorioCurso.BuscaVagasCurso(curso);
         }
+        public static List<Curso> BuscaoTodosCursos()
+        {
+            return RepositorioCurso.ListaTodosCursos();
+        }
+        public static List<Curso> BuscaCursoGeral(string textoPesquisa)
+        {
+            return RepositorioCurso.BuscaCurso(textoPesquisa);
+        }
+        public static Curso PesquisaCursoPorNome(string nome)
+        {
+            return RepositorioCurso.BuscarCursoPorNome(nome);
+        }
+        public static bool AtualizaCurso(Curso curso, string novaCarga, string novasVagas)
+        {
+            int inscritos = ServicesTurma.ListaTurmasCurso(curso.Nome).Count;
+            if (int.Parse(novasVagas) < inscritos)
+            {
+                return false;
+            }
+            RepositorioCurso.AtualizaCurso(curso, novaCarga, novasVagas);
+            return true;
+        }
+
+        public static void RemoveCurso(string nomeCurso)
+        {
+            RepositorioTurma.RemoveTurmasCurso(nomeCurso);
+            RepositorioCurso.RemoveCurso(nomeCurso);
+        }
     }
 }
